@@ -14,6 +14,25 @@
 		9F3227621B69FF820008CE70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227611B69FF820008CE70 /* Images.xcassets */; };
 		9F3227651B69FF820008CE70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227631B69FF820008CE70 /* LaunchScreen.xib */; };
 		9F3227711B69FF820008CE70 /* DCXXSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227701B69FF820008CE70 /* DCXXSystemTests.m */; };
+		9F32277E1B6A046B0008CE70 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F32277B1B6A046B0008CE70 /* SVProgressHUD.bundle */; };
+		9F32277F1B6A046B0008CE70 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32277D1B6A046B0008CE70 /* SVProgressHUD.m */; };
+		9F3227821B6A04C40008CE70 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227811B6A04C40008CE70 /* RestaurantViewController.m */; };
+		9F3227871B6A052B0008CE70 /* NumCountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227861B6A052B0008CE70 /* NumCountController.m */; };
+		9F32278E1B6A08510008CE70 /* OrderDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32278C1B6A08510008CE70 /* OrderDetailController.m */; };
+		9F32278F1B6A08510008CE70 /* OrderDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F32278D1B6A08510008CE70 /* OrderDetailController.xib */; };
+		9F3227921B6A0F310008CE70 /* CountDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227911B6A0F310008CE70 /* CountDetailController.m */; };
+		9F3227971B6A137C0008CE70 /* userheader@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227961B6A137C0008CE70 /* userheader@3x.png */; };
+		9F3227991B6A13800008CE70 /* userheader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227981B6A13800008CE70 /* userheader@2x.png */; };
+		9F32279B1B6A13840008CE70 /* userheader.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F32279A1B6A13840008CE70 /* userheader.png */; };
+		9F3227A01B6A18570008CE70 /* PeopleSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32279E1B6A18570008CE70 /* PeopleSelectController.m */; };
+		9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F32279F1B6A18570008CE70 /* PeopleSelectController.xib */; };
+		9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */; };
+		9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */; };
+		9F3227AB1B6A26330008CE70 /* PeopleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227AA1B6A26330008CE70 /* PeopleObject.m */; };
+		9F3227AE1B6A38360008CE70 /* RestaurantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227AD1B6A38360008CE70 /* RestaurantObject.m */; };
+		9F3227B11B6A3D9C0008CE70 /* BoookObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227B01B6A3D9C0008CE70 /* BoookObject.m */; };
+		9F3227B41B6A4B090008CE70 /* CountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227B31B6A4B090008CE70 /* CountObject.m */; };
+		B119DAEB4F5A5A08DD47FDC4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0F564F652CD7C165D0740E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		391DBE679C81336402A81AB1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7332489AB196F8623B871A45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F3227511B69FF820008CE70 /* DCXXSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCXXSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3227551B69FF820008CE70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3227561B69FF820008CE70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +61,37 @@
 		9F32276A1B69FF820008CE70 /* DCXXSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCXXSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F32276F1B69FF820008CE70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3227701B69FF820008CE70 /* DCXXSystemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCXXSystemTests.m; sourceTree = "<group>"; };
+		9F32277B1B6A046B0008CE70 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		9F32277C1B6A046B0008CE70 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		9F32277D1B6A046B0008CE70 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		9F3227801B6A04C40008CE70 /* RestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
+		9F3227811B6A04C40008CE70 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
+		9F3227851B6A052B0008CE70 /* NumCountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumCountController.h; sourceTree = "<group>"; };
+		9F3227861B6A052B0008CE70 /* NumCountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumCountController.m; sourceTree = "<group>"; };
+		9F32278B1B6A08510008CE70 /* OrderDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailController.h; sourceTree = "<group>"; };
+		9F32278C1B6A08510008CE70 /* OrderDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailController.m; sourceTree = "<group>"; };
+		9F32278D1B6A08510008CE70 /* OrderDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailController.xib; sourceTree = "<group>"; };
+		9F3227901B6A0F310008CE70 /* CountDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDetailController.h; sourceTree = "<group>"; };
+		9F3227911B6A0F310008CE70 /* CountDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDetailController.m; sourceTree = "<group>"; };
+		9F3227961B6A137C0008CE70 /* userheader@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userheader@3x.png"; sourceTree = "<group>"; };
+		9F3227981B6A13800008CE70 /* userheader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userheader@2x.png"; sourceTree = "<group>"; };
+		9F32279A1B6A13840008CE70 /* userheader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userheader.png; sourceTree = "<group>"; };
+		9F32279D1B6A18570008CE70 /* PeopleSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleSelectController.h; sourceTree = "<group>"; };
+		9F32279E1B6A18570008CE70 /* PeopleSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleSelectController.m; sourceTree = "<group>"; };
+		9F32279F1B6A18570008CE70 /* PeopleSelectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleSelectController.xib; sourceTree = "<group>"; };
+		9F3227A21B6A1FF50008CE70 /* PeopleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDetailController.h; sourceTree = "<group>"; };
+		9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailController.m; sourceTree = "<group>"; };
+		9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleDetailController.xib; sourceTree = "<group>"; };
+		9F3227A71B6A218E0008CE70 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9F3227A91B6A26330008CE70 /* PeopleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleObject.h; sourceTree = "<group>"; };
+		9F3227AA1B6A26330008CE70 /* PeopleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleObject.m; sourceTree = "<group>"; };
+		9F3227AC1B6A38360008CE70 /* RestaurantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantObject.h; sourceTree = "<group>"; };
+		9F3227AD1B6A38360008CE70 /* RestaurantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantObject.m; sourceTree = "<group>"; };
+		9F3227AF1B6A3D9C0008CE70 /* BoookObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoookObject.h; sourceTree = "<group>"; };
+		9F3227B01B6A3D9C0008CE70 /* BoookObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoookObject.m; sourceTree = "<group>"; };
+		9F3227B21B6A4B090008CE70 /* CountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountObject.h; sourceTree = "<group>"; };
+		9F3227B31B6A4B090008CE70 /* CountObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountObject.m; sourceTree = "<group>"; };
+		DF0F564F652CD7C165D0740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B119DAEB4F5A5A08DD47FDC4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +113,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		898F64EE9CF650F36E2B93D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF0F564F652CD7C165D0740E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F3227481B69FF820008CE70 = {
 			isa = PBXGroup;
 			children = (
 				9F3227531B69FF820008CE70 /* DCXXSystem */,
 				9F32276D1B69FF820008CE70 /* DCXXSystemTests */,
 				9F3227521B69FF820008CE70 /* Products */,
+				BD6F4D4482EA4B8FEB711997 /* Pods */,
+				898F64EE9CF650F36E2B93D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +144,11 @@
 		9F3227531B69FF820008CE70 /* DCXXSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9F3227A81B6A261D0008CE70 /* https */,
+				9F32279C1B6A18350008CE70 /* Select */,
+				9F3227841B6A05030008CE70 /* Count */,
+				9F3227831B6A04EC0008CE70 /* RestaurantSelect */,
+				9F32277A1B6A046B0008CE70 /* SVProgressHUD */,
 				9F3227581B69FF820008CE70 /* AppDelegate.h */,
 				9F3227591B69FF820008CE70 /* AppDelegate.m */,
 				9F32275B1B69FF820008CE70 /* ViewController.h */,
@@ -96,8 +164,12 @@
 		9F3227541B69FF820008CE70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F3227951B6A136F0008CE70 /* image@3x */,
+				9F3227941B6A13680008CE70 /* image@2x */,
+				9F3227931B6A13620008CE70 /* image */,
 				9F3227551B69FF820008CE70 /* Info.plist */,
 				9F3227561B69FF820008CE70 /* main.m */,
+				9F3227A71B6A218E0008CE70 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +191,100 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9F32277A1B6A046B0008CE70 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9F32277B1B6A046B0008CE70 /* SVProgressHUD.bundle */,
+				9F32277C1B6A046B0008CE70 /* SVProgressHUD.h */,
+				9F32277D1B6A046B0008CE70 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		9F3227831B6A04EC0008CE70 /* RestaurantSelect */ = {
+			isa = PBXGroup;
+			children = (
+				9F3227801B6A04C40008CE70 /* RestaurantViewController.h */,
+				9F3227811B6A04C40008CE70 /* RestaurantViewController.m */,
+				9F32278B1B6A08510008CE70 /* OrderDetailController.h */,
+				9F32278C1B6A08510008CE70 /* OrderDetailController.m */,
+				9F32278D1B6A08510008CE70 /* OrderDetailController.xib */,
+			);
+			name = RestaurantSelect;
+			sourceTree = "<group>";
+		};
+		9F3227841B6A05030008CE70 /* Count */ = {
+			isa = PBXGroup;
+			children = (
+				9F3227851B6A052B0008CE70 /* NumCountController.h */,
+				9F3227861B6A052B0008CE70 /* NumCountController.m */,
+				9F3227901B6A0F310008CE70 /* CountDetailController.h */,
+				9F3227911B6A0F310008CE70 /* CountDetailController.m */,
+			);
+			name = Count;
+			sourceTree = "<group>";
+		};
+		9F3227931B6A13620008CE70 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				9F32279A1B6A13840008CE70 /* userheader.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		9F3227941B6A13680008CE70 /* image@2x */ = {
+			isa = PBXGroup;
+			children = (
+				9F3227981B6A13800008CE70 /* userheader@2x.png */,
+			);
+			name = "image@2x";
+			sourceTree = "<group>";
+		};
+		9F3227951B6A136F0008CE70 /* image@3x */ = {
+			isa = PBXGroup;
+			children = (
+				9F3227961B6A137C0008CE70 /* userheader@3x.png */,
+			);
+			name = "image@3x";
+			sourceTree = "<group>";
+		};
+		9F32279C1B6A18350008CE70 /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				9F32279D1B6A18570008CE70 /* PeopleSelectController.h */,
+				9F32279E1B6A18570008CE70 /* PeopleSelectController.m */,
+				9F32279F1B6A18570008CE70 /* PeopleSelectController.xib */,
+				9F3227A21B6A1FF50008CE70 /* PeopleDetailController.h */,
+				9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */,
+				9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */,
+			);
+			name = Select;
+			sourceTree = "<group>";
+		};
+		9F3227A81B6A261D0008CE70 /* https */ = {
+			isa = PBXGroup;
+			children = (
+				9F3227A91B6A26330008CE70 /* PeopleObject.h */,
+				9F3227AA1B6A26330008CE70 /* PeopleObject.m */,
+				9F3227AC1B6A38360008CE70 /* RestaurantObject.h */,
+				9F3227AD1B6A38360008CE70 /* RestaurantObject.m */,
+				9F3227AF1B6A3D9C0008CE70 /* BoookObject.h */,
+				9F3227B01B6A3D9C0008CE70 /* BoookObject.m */,
+				9F3227B21B6A4B090008CE70 /* CountObject.h */,
+				9F3227B31B6A4B090008CE70 /* CountObject.m */,
+			);
+			name = https;
+			sourceTree = "<group>";
+		};
+		BD6F4D4482EA4B8FEB711997 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7332489AB196F8623B871A45 /* Pods.debug.xcconfig */,
+				391DBE679C81336402A81AB1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F3227741B69FF820008CE70 /* Build configuration list for PBXNativeTarget "DCXXSystem" */;
 			buildPhases = (
+				5A9BAD5EC6997683C2F10F45 /* Check Pods Manifest.lock */,
 				9F32274D1B69FF820008CE70 /* Sources */,
 				9F32274E1B69FF820008CE70 /* Frameworks */,
 				9F32274F1B69FF820008CE70 /* Resources */,
+				55F663D827C84C460DD9DAA2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,8 +368,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F3227601B69FF820008CE70 /* Main.storyboard in Resources */,
+				9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */,
+				9F32279B1B6A13840008CE70 /* userheader.png in Resources */,
+				9F3227971B6A137C0008CE70 /* userheader@3x.png in Resources */,
 				9F3227651B69FF820008CE70 /* LaunchScreen.xib in Resources */,
+				9F3227991B6A13800008CE70 /* userheader@2x.png in Resources */,
 				9F3227621B69FF820008CE70 /* Images.xcassets in Resources */,
+				9F32278F1B6A08510008CE70 /* OrderDetailController.xib in Resources */,
+				9F32277E1B6A046B0008CE70 /* SVProgressHUD.bundle in Resources */,
+				9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +389,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55F663D827C84C460DD9DAA2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A9BAD5EC6997683C2F10F45 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F32274D1B69FF820008CE70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3227AB1B6A26330008CE70 /* PeopleObject.m in Sources */,
 				9F32275D1B69FF820008CE70 /* ViewController.m in Sources */,
+				9F3227B41B6A4B090008CE70 /* CountObject.m in Sources */,
+				9F32277F1B6A046B0008CE70 /* SVProgressHUD.m in Sources */,
+				9F3227921B6A0F310008CE70 /* CountDetailController.m in Sources */,
+				9F3227A01B6A18570008CE70 /* PeopleSelectController.m in Sources */,
+				9F3227871B6A052B0008CE70 /* NumCountController.m in Sources */,
 				9F32275A1B69FF820008CE70 /* AppDelegate.m in Sources */,
 				9F3227571B69FF820008CE70 /* main.m in Sources */,
+				9F32278E1B6A08510008CE70 /* OrderDetailController.m in Sources */,
+				9F3227AE1B6A38360008CE70 /* RestaurantObject.m in Sources */,
+				9F3227821B6A04C40008CE70 /* RestaurantViewController.m in Sources */,
+				9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */,
+				9F3227B11B6A3D9C0008CE70 /* BoookObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +564,13 @@
 		};
 		9F3227751B69FF820008CE70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7332489AB196F8623B871A45 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DCXXSystem/PrefixHeader.pch";
 				INFOPLIST_FILE = DCXXSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +578,13 @@
 		};
 		9F3227761B69FF820008CE70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391DBE679C81336402A81AB1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DCXXSystem/PrefixHeader.pch";
 				INFOPLIST_FILE = DCXXSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +643,7 @@
 				9F3227761B69FF820008CE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F3227771B69FF820008CE70 /* Build configuration list for PBXNativeTarget "DCXXSystemTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +652,7 @@
 				9F3227791B69FF820008CE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
