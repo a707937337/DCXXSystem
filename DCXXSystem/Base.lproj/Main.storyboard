@@ -58,7 +58,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="1Mw-PT-Ybb" firstAttribute="height" secondItem="CIa-op-Db5" secondAttribute="height" id="1hW-sc-kqa"/>
                                     <constraint firstAttribute="trailing" secondItem="CIa-op-Db5" secondAttribute="trailing" constant="148" id="5Ci-TG-GuC"/>
@@ -101,6 +100,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 杭州定川信息学技术有限公司" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssQ-8E-9ME">
+                                <rect key="frame" x="40" y="539" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="h1K-47-1Ne"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,12 +121,15 @@
                             <constraint firstItem="e0e-NF-mbV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-3" id="93g-9l-koK"/>
                             <constraint firstItem="kSI-xF-8rG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="121" id="EKo-fB-9Nh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tZj-Yc-xlm" secondAttribute="trailing" constant="45" id="EyS-yt-GrA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ssQ-8E-9ME" secondAttribute="trailing" constant="24" id="IXn-8e-4at"/>
                             <constraint firstItem="kSI-xF-8rG" firstAttribute="leading" secondItem="xRy-FJ-72H" secondAttribute="trailing" constant="73" id="Ic1-hG-z5T"/>
                             <constraint firstItem="xRy-FJ-72H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="LDo-QW-R8B"/>
                             <constraint firstItem="orr-39-flb" firstAttribute="top" secondItem="xRy-FJ-72H" secondAttribute="bottom" constant="8" id="LrU-e2-FIQ"/>
                             <constraint firstItem="tZj-Yc-xlm" firstAttribute="top" secondItem="kSI-xF-8rG" secondAttribute="bottom" constant="8" id="Pqh-2N-k27"/>
                             <constraint firstItem="tZj-Yc-xlm" firstAttribute="leading" secondItem="orr-39-flb" secondAttribute="trailing" constant="71" id="dg5-sj-k7M"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ssQ-8E-9ME" secondAttribute="bottom" constant="8" id="i6O-8r-rUy"/>
                             <constraint firstAttribute="trailing" secondItem="e0e-NF-mbV" secondAttribute="trailing" constant="-3" id="k6b-gl-Of5"/>
+                            <constraint firstItem="ssQ-8E-9ME" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="n1x-h6-axX"/>
                             <constraint firstItem="xRy-FJ-72H" firstAttribute="width" secondItem="orr-39-flb" secondAttribute="width" id="ror-o1-1Wz"/>
                             <constraint firstItem="xRy-FJ-72H" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="121" id="wIA-rm-ywy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kSI-xF-8rG" secondAttribute="trailing" constant="45" id="wMQ-XP-jmn"/>

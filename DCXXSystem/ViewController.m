@@ -51,20 +51,59 @@
     
     //设置UINavigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:133/255.0 blue:50/255.0 alpha:1];//背景颜色
+   // [self insertBarGradient];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];//返回按钮的颜色
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:19]}];//设置标题的样式
     self.navigationController.navigationBar.translucent = YES;//不模糊
     
-    self.bgView.backgroundColor =  [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
-   
+  //  self.bgView.backgroundColor =  [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
     self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.bgView.layer.borderWidth = 1;
+   // self.bgView.layer.borderWidth = 1;
     
     self.userLabel.font = [UIFont boldSystemFontOfSize:17];
     
     self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
     
+    [self insertColorGradient];
     
+}
+
+- (void)insertColorGradient
+{
+    UIColor *colorOne = [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
+    
+    UIColor *colorTwo = [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:1.0];
+    
+    NSArray *colors = @[(id)colorOne.CGColor,(id)colorTwo.CGColor];
+    
+    NSNumber *stopOne = [NSNumber numberWithFloat:0.0];
+    NSNumber *stopTwo = [NSNumber numberWithFloat:1.0];
+    NSArray *locations = @[stopOne,stopTwo];
+    
+    CAGradientLayer *headersLayers = [CAGradientLayer layer];
+    headersLayers.colors = colors;
+    headersLayers.locations = locations;
+    headersLayers.frame = self.bgView.bounds;
+    [self.bgView.layer insertSublayer:headersLayers atIndex:0];
+}
+
+- (void)insertBarGradient
+{
+    UIColor *colorOne = [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.7];
+    
+    UIColor *colorTwo = [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
+    
+    NSArray *colors = @[(id)colorOne.CGColor,(id)colorTwo.CGColor];
+    
+    NSNumber *stopOne = [NSNumber numberWithFloat:0.0];
+    NSNumber *stopTwo = [NSNumber numberWithFloat:1.0];
+    NSArray *locations = @[stopOne,stopTwo];
+    
+    CAGradientLayer *headersLayers = [CAGradientLayer layer];
+    headersLayers.colors = colors;
+    headersLayers.locations = locations;
+    headersLayers.frame = self.navigationController.navigationBar.bounds;
+    [self.navigationController.navigationBar.layer insertSublayer:headersLayers atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {

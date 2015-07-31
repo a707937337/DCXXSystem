@@ -133,6 +133,7 @@ static NSInteger _selectRow;
     _selectUser = listData[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     _selectRow = indexPath.row;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
