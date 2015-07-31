@@ -8,12 +8,16 @@
 
 #import "ViewController.h"
 #import "PeopleSelectController.h"
+#import "RestaurantViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *reserve_btn;
 @property (weak, nonatomic) IBOutlet UIButton *count_btn;
-- (IBAction)selectPeopleAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *bgView;
+- (IBAction)selectPeopleAction:(id)sender;
+- (IBAction)bookAction:(id)sender;
 
 
 @end
@@ -23,8 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *user = [defaults objectForKey:USERNAME];
+    NSDictionary *user = [self getUserName];
     NSString *name = (NSString *)[user objectForKey:@"Sname"];
     if ([name length] == 0) {
         self.userLabel.text = @"未知用户";
@@ -34,9 +37,32 @@
     
 }
 
+//获取保存在本地的信息
+- (NSDictionary *)getUserName
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *user = [defaults objectForKey:USERNAME];
+    return user;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //设置UINavigationbar
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:133/255.0 blue:50/255.0 alpha:1];//背景颜色
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];//返回按钮的颜色
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:19]}];//设置标题的样式
+    self.navigationController.navigationBar.translucent = YES;//不模糊
+    
+    self.bgView.backgroundColor =  [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
+   
+    self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.bgView.layer.borderWidth = 1;
+    
+    self.userLabel.font = [UIFont boldSystemFontOfSize:17];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
     
     
 }
@@ -51,5 +77,33 @@
     //选择人员信息
     PeopleSelectController *people = [[PeopleSelectController alloc] init];
     [self.navigationController pushViewController:people animated:YES];
+}
+
+//点餐
+- (IBAction)bookAction:(id)sender
+{
+    NSDictionary *user = [self getUserName];
+    NSString *name = (NSString *)[user objectForKey:@"Sname"];
+    NSString *Sid = (NSString *)[user objectForKey:@"Sid"];
+    if ([name length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先选择订餐人员" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    //[self.navigationController performSegueWithIdentifier:@"bookPush" sender:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RestaurantViewController *restaurant = [story instantiateViewControllerWithIdentifier:@"BookController"];
+    restaurant.personId = Sid;//将人员编号传递进去
+    [self.navigationController pushViewController:restaurant animated:YES];
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        //直接进入组织架构选人
+        [self performSelector:@selector(selectPeopleAction:) withObject:nil];
+    }
 }
 @end

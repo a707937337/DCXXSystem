@@ -10,9 +10,10 @@
 #import "BoookObject.h"
 #import "SVProgressHUD.h"
 
-@interface OrderDetailController ()
+@interface OrderDetailController ()<UIAlertViewDelegate>
 {
     NSArray *resposeArr;//返回结果
+    BOOL _isOK;//操作成功
 }
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -41,14 +42,24 @@
         if ([name length] == 0) {
             self.nameLabel.text = @"未知用户";
         }else{
-            self.nameLabel.text = [NSString stringWithFormat:@"姓名: %@",name];
+            self.nameLabel.text = [NSString stringWithFormat:@"姓       名: %@",name];
         }
-        self.dateLabel.text = [NSString stringWithFormat:@"当前日期: %@",[self getSystemDate]];
+        self.dateLabel.text = [NSString stringWithFormat:@"预定日期: %@",[self getSystemDate]];
     }
     @catch (NSException *exception) {
         NSLog(@"%@",exception);
     }
- 
+    
+    if (self.isCanBook) {
+        //不能订餐
+        self.comfirmBtn.userInteractionEnabled = NO;
+        [self.comfirmBtn setBackgroundColor:[UIColor lightGrayColor]];
+    }else{
+        self.cancelBtn.userInteractionEnabled = NO;
+        [self.cancelBtn setBackgroundColor:[UIColor lightGrayColor]];
+    }
+    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
+
     
 }
 
@@ -98,10 +109,12 @@
         resposeArr = [BoookObject requestDic];
         NSDictionary *resResult = [resposeArr lastObject];
         if ([[resResult objectForKey:@"success"] isEqualToString:@"true"]) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"操作成功" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            _isOK = YES;
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[resResult objectForKey:@"result"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"操作失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            _isOK = NO;
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[resResult objectForKey:@"result"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
         }
     });
@@ -125,5 +138,17 @@
      [self getWeb:[user objectForKey:@"Sid"] withType:@"CanelBooking"];
  
 }
+
+#pragma UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (_isOK) {
+        if (buttonIndex == 0) {
+            _isOK = NO;
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }
+}
+
 
 @end

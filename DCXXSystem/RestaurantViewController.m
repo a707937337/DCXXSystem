@@ -10,6 +10,7 @@
 #import "OrderDetailController.h"
 #import "RestaurantObject.h"
 #import "SVProgressHUD.h"
+#import "ResturantCell.h"
 
 @interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -20,6 +21,15 @@
 @end
 
 @implementation RestaurantViewController
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        [RestaurantObject cancelRequest];
+        [SVProgressHUD dismiss];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +48,7 @@
 {
     [SVProgressHUD showWithStatus:@"加载中..."];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([RestaurantObject fetch]) {
+        if ([RestaurantObject fetchWithPersonID:self.personId]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -80,22 +90,40 @@
 {
     static NSString *identifier = @"MyCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    ResturantCell *cell = (ResturantCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[ResturantCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        UILabel *statusLabel = [[UILabel alloc] initWithFrame:(CGRect){240,12,50,20}];
+        statusLabel.tag = 101;
+        statusLabel.font = [UIFont systemFontOfSize:14];
+        [statusLabel setTextColor:[UIColor redColor]];
+        [cell.contentView addSubview:statusLabel];
     }
+    UILabel *status = (UILabel *)[cell viewWithTag:101];
+    NSDictionary *restaurant = list[indexPath.row];
+    if ([[restaurant objectForKey:@"Szt"] isEqualToString:@"true"]) {
+        //status.backgroundColor = [UIColor greenColor];
+        status.text = @"已预定";
+        cell.isBook = YES;
+    }else{
+        cell.isBook = NO;
+    }
+    
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [list[indexPath.row] objectForKey:@"Sname"];
+    cell.textLabel.text = [restaurant objectForKey:@"Sname"];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ResturantCell *cell = (ResturantCell *)[tableView cellForRowAtIndexPath:indexPath];
     OrderDetailController *order = [[OrderDetailController alloc] initWithNibName:@"OrderDetailController" bundle:nil];
     order.title = [list[indexPath.row] objectForKey:@"Sname"];
     order.restaurantId = [list[indexPath.row] objectForKey:@"Sid"];
+    order.isCanBook = cell.isBook;//传递进去是否能订餐的状态
     [self.navigationController pushViewController:order animated:YES];
 }
 

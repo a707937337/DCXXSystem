@@ -12,7 +12,7 @@
 static AFHTTPRequestOperation *_operation = nil;
 @implementation RestaurantObject
 
-+ (BOOL)fetch
++ (BOOL)fetchWithPersonID:(NSString *)personID
 {
     BOOL ret = NO;
     
@@ -20,6 +20,7 @@ static AFHTTPRequestOperation *_operation = nil;
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     NSDictionary *par = @{@"t":@"GetRefectory",
+                          @"results":personID,
                           @"returntype":@"json"};
     _operation = [manager POST:URL parameters:par success:nil failure:nil];
     [_operation waitUntilFinished];

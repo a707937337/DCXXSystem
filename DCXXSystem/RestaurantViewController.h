@@ -10,4 +10,6 @@
 
 @interface RestaurantViewController : UIViewController
 
+@property (nonatomic, copy)NSString *personId;//人员编号
+
 @end

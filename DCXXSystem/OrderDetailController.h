@@ -12,4 +12,6 @@
 
 @property (nonatomic, copy) NSString *restaurantId;//餐厅编号
 
+@property (nonatomic, assign) BOOL isCanBook;//是否能进行预定
+
 @end

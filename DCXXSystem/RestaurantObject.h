@@ -10,7 +10,7 @@
 
 @interface RestaurantObject : NSObject
 
-+ (BOOL)fetch;
++ (BOOL)fetchWithPersonID:(NSString *)personID;
 
 + (NSArray *)requestData;
 

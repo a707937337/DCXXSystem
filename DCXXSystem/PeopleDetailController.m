@@ -21,6 +21,15 @@
 
 @implementation PeopleDetailController
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        [PeopleObject cancelRequest];
+        [SVProgressHUD dismiss];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -33,8 +42,9 @@
         UIButton *confirm = [UIButton buttonWithType:UIButtonTypeCustom];
         confirm.frame = (CGRect){0,0,40,25};
     
-        [confirm setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [confirm setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [confirm setTitle:@"确定" forState:UIControlStateNormal];
+        confirm.titleLabel.font = [UIFont systemFontOfSize:14];
         [confirm addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
 
     

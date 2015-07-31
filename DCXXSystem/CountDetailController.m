@@ -20,6 +20,15 @@
 
 @implementation CountDetailController
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        [CountObject cancelRequest];
+        [SVProgressHUD dismiss];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -86,6 +95,7 @@
     }
     
     NSDictionary *dic = listData[indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@份",[dic objectForKey:@"type"],[dic objectForKey:@"value"]];
     
     return cell;

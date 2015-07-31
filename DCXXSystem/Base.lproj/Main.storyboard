@@ -18,37 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSI-xF-8rG">
-                                <rect key="frame" x="200" y="185" width="70" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSI-xF-8rG">
+                                <rect key="frame" x="189" y="185" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="rtk-WC-9VK"/>
                                 </constraints>
-                                <state key="normal" title="数量统计">
+                                <state key="normal" image="count.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Zru-h3-MQp" kind="push" id="nkC-x3-lQD"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0e-NF-mbV">
-                                <rect key="frame" x="0.0" y="64" width="320" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0e-NF-mbV">
+                                <rect key="frame" x="-3" y="64" width="326" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="欢迎使用定川内部系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mw-PT-Ybb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎使用定川内部系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mw-PT-Ybb">
                                         <rect key="frame" x="77" y="44" width="160" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="F1G-Zt-qBd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="汪 超" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-op-Db5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汪 超" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-op-Db5">
                                         <rect key="frame" x="77" y="15" width="101" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKU-G9-3qO">
-                                        <rect key="frame" x="13" y="15" width="50" height="50"/>
-                                        <state key="normal" image="userheader.png">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKU-G9-3qO">
+                                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                        <state key="normal" image="user.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -57,39 +59,76 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1Mw-PT-Ybb" firstAttribute="height" secondItem="CIa-op-Db5" secondAttribute="height" id="1hW-sc-kqa"/>
+                                    <constraint firstAttribute="trailing" secondItem="CIa-op-Db5" secondAttribute="trailing" constant="148" id="5Ci-TG-GuC"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Mw-PT-Ybb" secondAttribute="bottom" constant="15" id="9aO-XF-1Jw"/>
+                                    <constraint firstItem="CIa-op-Db5" firstAttribute="leading" secondItem="DKU-G9-3qO" secondAttribute="trailing" constant="12" id="AaK-eW-Wts"/>
+                                    <constraint firstItem="1Mw-PT-Ybb" firstAttribute="leading" secondItem="DKU-G9-3qO" secondAttribute="trailing" constant="12" id="C7M-Ha-zNq"/>
+                                    <constraint firstItem="1Mw-PT-Ybb" firstAttribute="top" secondItem="CIa-op-Db5" secondAttribute="bottom" constant="8" id="IpW-j1-oYq"/>
+                                    <constraint firstItem="DKU-G9-3qO" firstAttribute="leading" secondItem="e0e-NF-mbV" secondAttribute="leading" constant="15" id="LDd-4O-Sxu"/>
+                                    <constraint firstAttribute="height" constant="80" id="NTI-sQ-KrR"/>
+                                    <constraint firstItem="CIa-op-Db5" firstAttribute="top" secondItem="e0e-NF-mbV" secondAttribute="top" constant="15" id="Q7X-ID-gWq"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Mw-PT-Ybb" secondAttribute="trailing" constant="89" id="RfK-4b-QYh"/>
+                                    <constraint firstAttribute="bottom" secondItem="DKU-G9-3qO" secondAttribute="bottom" constant="15" id="XRf-b0-QLE"/>
+                                    <constraint firstItem="DKU-G9-3qO" firstAttribute="top" secondItem="e0e-NF-mbV" secondAttribute="top" constant="15" id="kDj-Cb-0dE"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRy-FJ-72H">
-                                <rect key="frame" x="29" y="185" width="70" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRy-FJ-72H">
+                                <rect key="frame" x="46" y="185" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="2uT-Vv-zBz"/>
                                     <constraint firstAttribute="height" constant="70" id="Mmu-Jk-ezS"/>
                                     <constraint firstAttribute="width" constant="70" id="qEL-Tt-4k4"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="yap-DW-he0"/>
                                 </constraints>
-                                <state key="normal" title="中餐预定">
+                                <state key="normal" image="book.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QFt-Ff-ovz" kind="push" id="l5o-Li-aHl"/>
+                                    <action selector="bookAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="huH-Xo-XLz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="中餐预定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orr-39-flb">
+                                <rect key="frame" x="48" y="263" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="数量统计" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-Yc-xlm">
+                                <rect key="frame" x="189" y="263" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="e0e-NF-mbV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3AA-RO-Nwx"/>
                             <constraint firstItem="xRy-FJ-72H" firstAttribute="height" secondItem="kSI-xF-8rG" secondAttribute="height" id="5WF-so-ZcR"/>
+                            <constraint firstItem="kSI-xF-8rG" firstAttribute="width" secondItem="tZj-Yc-xlm" secondAttribute="width" id="6CF-nO-vyM"/>
+                            <constraint firstItem="orr-39-flb" firstAttribute="width" secondItem="tZj-Yc-xlm" secondAttribute="width" id="7QQ-Vw-WHx"/>
+                            <constraint firstItem="orr-39-flb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="7Qa-mr-11w"/>
                             <constraint firstItem="xRy-FJ-72H" firstAttribute="width" secondItem="kSI-xF-8rG" secondAttribute="width" id="8IV-Xr-aCb"/>
+                            <constraint firstItem="e0e-NF-mbV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-3" id="93g-9l-koK"/>
                             <constraint firstItem="kSI-xF-8rG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="121" id="EKo-fB-9Nh"/>
-                            <constraint firstItem="kSI-xF-8rG" firstAttribute="leading" secondItem="xRy-FJ-72H" secondAttribute="trailing" constant="100" id="Ic1-hG-z5T"/>
-                            <constraint firstItem="xRy-FJ-72H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="LDo-QW-R8B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tZj-Yc-xlm" secondAttribute="trailing" constant="45" id="EyS-yt-GrA"/>
+                            <constraint firstItem="kSI-xF-8rG" firstAttribute="leading" secondItem="xRy-FJ-72H" secondAttribute="trailing" constant="73" id="Ic1-hG-z5T"/>
+                            <constraint firstItem="xRy-FJ-72H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="LDo-QW-R8B"/>
+                            <constraint firstItem="orr-39-flb" firstAttribute="top" secondItem="xRy-FJ-72H" secondAttribute="bottom" constant="8" id="LrU-e2-FIQ"/>
+                            <constraint firstItem="tZj-Yc-xlm" firstAttribute="top" secondItem="kSI-xF-8rG" secondAttribute="bottom" constant="8" id="Pqh-2N-k27"/>
+                            <constraint firstItem="tZj-Yc-xlm" firstAttribute="leading" secondItem="orr-39-flb" secondAttribute="trailing" constant="71" id="dg5-sj-k7M"/>
+                            <constraint firstAttribute="trailing" secondItem="e0e-NF-mbV" secondAttribute="trailing" constant="-3" id="k6b-gl-Of5"/>
+                            <constraint firstItem="xRy-FJ-72H" firstAttribute="width" secondItem="orr-39-flb" secondAttribute="width" id="ror-o1-1Wz"/>
                             <constraint firstItem="xRy-FJ-72H" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="121" id="wIA-rm-ywy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kSI-xF-8rG" secondAttribute="trailing" constant="34" id="wMQ-XP-jmn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kSI-xF-8rG" secondAttribute="trailing" constant="45" id="wMQ-XP-jmn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="定川内部系统" id="SgH-7k-Rab">
                         <barButtonItem key="backBarButtonItem" title="返回" id="Lca-f1-yFi"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bgView" destination="e0e-NF-mbV" id="YwD-Y9-bcR"/>
                         <outlet property="count_btn" destination="kSI-xF-8rG" id="RBf-f8-Y6v"/>
                         <outlet property="reserve_btn" destination="xRy-FJ-72H" id="lZ5-Uw-p43"/>
                         <outlet property="userLabel" destination="CIa-op-Db5" id="C5r-ER-drB"/>
@@ -102,7 +141,7 @@
         <!--餐厅选择-->
         <scene sceneID="Q0X-M4-gIE">
             <objects>
-                <viewController id="QFt-Ff-ovz" customClass="RestaurantViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookController" id="QFt-Ff-ovz" customClass="RestaurantViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZgG-d1-zxt"/>
                         <viewControllerLayoutGuide type="bottom" id="4hP-ic-4Yz"/>
@@ -189,7 +228,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="userheader.png" width="70" height="70"/>
+        <image name="book.png" width="70" height="70"/>
+        <image name="count.png" width="70" height="70"/>
+        <image name="user.png" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
