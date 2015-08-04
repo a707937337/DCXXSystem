@@ -23,7 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="rtk-WC-9VK"/>
                                 </constraints>
-                                <state key="normal" image="count.png">
+                                <state key="normal" image="book.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -81,7 +81,7 @@
                                     <constraint firstAttribute="width" constant="70" id="qEL-Tt-4k4"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="yap-DW-he0"/>
                                 </constraints>
-                                <state key="normal" image="book.png">
+                                <state key="normal" image="count.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
