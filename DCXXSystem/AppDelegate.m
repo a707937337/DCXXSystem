@@ -7,8 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "APService.h"
+#import <sys/utsname.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface AppDelegate ()
+{
+    AVAudioPlayer *myBackMusic;
+}
 
 @end
 
@@ -19,7 +26,89 @@
     // Override point for customization after application launch.
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+    // Required
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                       UIUserNotificationTypeSound |
+                                                       UIUserNotificationTypeAlert)
+                                           categories:nil];
+    } else {
+        //categories 必须为nil
+        [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                       UIRemoteNotificationTypeSound |
+                                                       UIRemoteNotificationTypeAlert)
+                                           categories:nil];
+    }
+#else
+    //categories 必须为nil
+    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                   UIRemoteNotificationTypeSound |
+                                                   UIRemoteNotificationTypeAlert)
+                                       categories:nil];
+#endif
+    // Required
+    [APService setupWithOption:launchOptions];
+    
     return YES;
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    // Required
+    [APService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    // Required
+    [APService handleRemoteNotification:userInfo];
+    
+}
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    
+    // IOS 7 Support Required
+    [APService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+//    struct utsname systemInfo;
+//    uname(&systemInfo);
+//    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+//    if ([deviceString isEqualToString:@"iPhone3,1"]) {
+//        NSLog(@"当前的手机是iPhone 4");
+//    }else if([deviceString isEqualToString:@"iPhone4,1"])
+//    {
+//        NSLog(@"当前手机是 iPhone 4S");
+//    }
+//    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sound" ofType:@"caf"];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        //文件存在
+        NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+        NSError *myError = nil;
+        myBackMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&myError];
+        if (myError == nil) {
+            NSLog(@"error == %@",[myError description]);
+        }
+        
+        [myBackMusic setVolume:3];
+        myBackMusic.numberOfLoops = 0;
+        [myBackMusic prepareToPlay];
+        //调用振动
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
+    }
+    //设置锁屏仍能继续播放
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setActive: YES error: nil];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -34,6 +123,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    //进入程序
+    [application setApplicationIconBadgeNumber:0];
+    [APService setBadge:0];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

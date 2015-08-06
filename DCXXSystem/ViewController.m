@@ -58,6 +58,7 @@
     
   //  self.bgView.backgroundColor =  [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
     self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
+   // self.bgView.translatesAutoresizingMaskIntoConstraints = NO;
    // self.bgView.layer.borderWidth = 1;
     
     self.userLabel.font = [UIFont boldSystemFontOfSize:17];
