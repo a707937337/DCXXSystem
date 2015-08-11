@@ -1,29 +1,27 @@
 //
-//  PeopleObject.m
+//  RequestObject.m
 //  DCXXSystem
-//
-//  Created by teddy on 15/7/30.
+//  **********网络请求类*************
+//  Created by teddy on 15/8/11.
 //  Copyright (c) 2015年 teddy. All rights reserved.
 //
 
-#import "PeopleObject.h"
+#import "RequestObject.h"
 #import <AFNetworking.h>
 
 static AFHTTPRequestOperation *_operation = nil;
-@implementation PeopleObject
+@implementation RequestObject
 
-+ (BOOL)fetch:(NSString *)result withLevel:(NSString *)level
++ (BOOL)fetchWithType:(NSString *)requestType withResults:(NSString *)result
 {
-    BOOL ret;
-    
+    BOOL ret = NO;
     //http://115.236.2.245:38019/datadc.ashx?t=GetDept&results=0$&returntype=json
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    NSString *resluts = [NSString stringWithFormat:@"%@$%@",level,result];
-    NSDictionary *parmater = @{@"t":@"GetDept",
-                               @"results":resluts,
+    NSDictionary *parmater = @{@"t":requestType,
+                               @"results":result,
                                @"returntype":@"json"};
     _operation = [manager POST:URL parameters:parmater success:nil failure:nil];
     [_operation waitUntilFinished];
@@ -31,10 +29,8 @@ static AFHTTPRequestOperation *_operation = nil;
         ret = YES;
         datas = (NSArray *)[NSJSONSerialization JSONObjectWithData:_operation.responseData options:NSJSONReadingMutableContainers error:nil];
     }
-    
-    return  ret;
+    return ret;
 }
-
 
 static NSArray *datas = nil;
 + (NSArray *)requestData

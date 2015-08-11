@@ -70,6 +70,7 @@
 }
 
 
+//ios 7接收消息的机制
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     

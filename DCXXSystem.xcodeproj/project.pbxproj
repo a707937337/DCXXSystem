@@ -28,6 +28,12 @@
 		9F3227AE1B6A38360008CE70 /* RestaurantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227AD1B6A38360008CE70 /* RestaurantObject.m */; };
 		9F3227B11B6A3D9C0008CE70 /* BoookObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227B01B6A3D9C0008CE70 /* BoookObject.m */; };
 		9F3227B41B6A4B090008CE70 /* CountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227B31B6A4B090008CE70 /* CountObject.m */; };
+		9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */; };
+		9F4F24311B79D1C100D7CBD5 /* PlanReadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24301B79D1C100D7CBD5 /* PlanReadController.m */; };
+		9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24331B79D54700D7CBD5 /* RequestObject.m */; };
+		9F4F24371B79D99300D7CBD5 /* PlanListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24361B79D99300D7CBD5 /* PlanListController.m */; };
+		9F4F243A1B79DCF900D7CBD5 /* FIleDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24391B79DCF900D7CBD5 /* FIleDownLoad.m */; };
+		9F4F243D1B79E73E00D7CBD5 /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F243C1B79E73E00D7CBD5 /* PDFViewController.m */; };
 		9F51A3851B71EB9F00561A61 /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51A3841B71EB9F00561A61 /* libPushSDK-1.8.5.a */; };
 		9F51A3871B71EBD900561A61 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51A3861B71EBD900561A61 /* libz.dylib */; };
 		9F51A38B1B71EBEA00561A61 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51A38A1B71EBEA00561A61 /* CFNetwork.framework */; };
@@ -100,6 +106,18 @@
 		9F3227B01B6A3D9C0008CE70 /* BoookObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoookObject.m; sourceTree = "<group>"; };
 		9F3227B21B6A4B090008CE70 /* CountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountObject.h; sourceTree = "<group>"; };
 		9F3227B31B6A4B090008CE70 /* CountObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountObject.m; sourceTree = "<group>"; };
+		9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRoomController.h; sourceTree = "<group>"; };
+		9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRoomController.m; sourceTree = "<group>"; };
+		9F4F242F1B79D1C100D7CBD5 /* PlanReadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanReadController.h; sourceTree = "<group>"; };
+		9F4F24301B79D1C100D7CBD5 /* PlanReadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanReadController.m; sourceTree = "<group>"; };
+		9F4F24321B79D54700D7CBD5 /* RequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestObject.h; sourceTree = "<group>"; };
+		9F4F24331B79D54700D7CBD5 /* RequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestObject.m; sourceTree = "<group>"; };
+		9F4F24351B79D99300D7CBD5 /* PlanListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListController.h; sourceTree = "<group>"; };
+		9F4F24361B79D99300D7CBD5 /* PlanListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListController.m; sourceTree = "<group>"; };
+		9F4F24381B79DCF900D7CBD5 /* FIleDownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIleDownLoad.h; sourceTree = "<group>"; };
+		9F4F24391B79DCF900D7CBD5 /* FIleDownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIleDownLoad.m; sourceTree = "<group>"; };
+		9F4F243B1B79E73E00D7CBD5 /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFViewController.h; sourceTree = "<group>"; };
+		9F4F243C1B79E73E00D7CBD5 /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
 		9F51A3831B71EB9F00561A61 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		9F51A3841B71EB9F00561A61 /* libPushSDK-1.8.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.5.a"; sourceTree = "<group>"; };
 		9F51A3861B71EBD900561A61 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -183,6 +201,8 @@
 		9F3227531B69FF820008CE70 /* DCXXSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9F4F242E1B79D1AF00D7CBD5 /* PlanRead */,
+				9F4F242A1B79D16D00D7CBD5 /* MeetRoomBook */,
 				9F5ECFFC1B6B00650062BAAF /* customCell */,
 				9F3227A81B6A261D0008CE70 /* https */,
 				9F32279C1B6A18350008CE70 /* Select */,
@@ -318,8 +338,34 @@
 				9F3227B01B6A3D9C0008CE70 /* BoookObject.m */,
 				9F3227B21B6A4B090008CE70 /* CountObject.h */,
 				9F3227B31B6A4B090008CE70 /* CountObject.m */,
+				9F4F24321B79D54700D7CBD5 /* RequestObject.h */,
+				9F4F24331B79D54700D7CBD5 /* RequestObject.m */,
+				9F4F24381B79DCF900D7CBD5 /* FIleDownLoad.h */,
+				9F4F24391B79DCF900D7CBD5 /* FIleDownLoad.m */,
 			);
 			name = https;
+			sourceTree = "<group>";
+		};
+		9F4F242A1B79D16D00D7CBD5 /* MeetRoomBook */ = {
+			isa = PBXGroup;
+			children = (
+				9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */,
+				9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */,
+			);
+			name = MeetRoomBook;
+			sourceTree = "<group>";
+		};
+		9F4F242E1B79D1AF00D7CBD5 /* PlanRead */ = {
+			isa = PBXGroup;
+			children = (
+				9F4F242F1B79D1C100D7CBD5 /* PlanReadController.h */,
+				9F4F24301B79D1C100D7CBD5 /* PlanReadController.m */,
+				9F4F24351B79D99300D7CBD5 /* PlanListController.h */,
+				9F4F24361B79D99300D7CBD5 /* PlanListController.m */,
+				9F4F243B1B79E73E00D7CBD5 /* PDFViewController.h */,
+				9F4F243C1B79E73E00D7CBD5 /* PDFViewController.m */,
+			);
+			name = PlanRead;
 			sourceTree = "<group>";
 		};
 		9F51A3821B71EB9300561A61 /* push */ = {
@@ -511,14 +557,20 @@
 				9F32277F1B6A046B0008CE70 /* SVProgressHUD.m in Sources */,
 				9F3227921B6A0F310008CE70 /* CountDetailController.m in Sources */,
 				9F3227A01B6A18570008CE70 /* PeopleSelectController.m in Sources */,
+				9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */,
 				9F3227871B6A052B0008CE70 /* NumCountController.m in Sources */,
+				9F4F24371B79D99300D7CBD5 /* PlanListController.m in Sources */,
 				9F32275A1B69FF820008CE70 /* AppDelegate.m in Sources */,
 				9F3227571B69FF820008CE70 /* main.m in Sources */,
+				9F4F24311B79D1C100D7CBD5 /* PlanReadController.m in Sources */,
 				9F32278E1B6A08510008CE70 /* OrderDetailController.m in Sources */,
+				9F4F243A1B79DCF900D7CBD5 /* FIleDownLoad.m in Sources */,
 				9F3227AE1B6A38360008CE70 /* RestaurantObject.m in Sources */,
+				9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */,
 				9F3227821B6A04C40008CE70 /* RestaurantViewController.m in Sources */,
 				9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */,
 				9F3227B11B6A3D9C0008CE70 /* BoookObject.m in Sources */,
+				9F4F243D1B79E73E00D7CBD5 /* PDFViewController.m in Sources */,
 				9F5ECFFF1B6B00820062BAAF /* ResturantCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
