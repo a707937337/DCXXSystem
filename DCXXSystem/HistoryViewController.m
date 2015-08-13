@@ -1,25 +1,25 @@
 //
-//  BookRoomController.m
+//  HistoryViewController.m
 //  DCXXSystem
-//  ***********会议室预定*******
-//  Created by teddy on 15/8/11.
+//
+//  Created by teddy on 15/8/13.
 //  Copyright (c) 2015年 teddy. All rights reserved.
 //
 
-#import "BookRoomController.h"
-#import "RequestObject.h"
+#import "HistoryViewController.h"
 #import "SVProgressHUD.h"
-#import "MeetingBookDetailController.h"
+#import "RequestObject.h"
+#import "HistoryCell.h"
 
-@interface BookRoomController ()<UITableViewDataSource,UITableViewDelegate>
+@interface HistoryViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
-    NSArray *_list; //数据源
+    UITableView *_table;
+    NSArray *_list;
 }
-@property (weak, nonatomic) IBOutlet UITableView *meetTable;
 
 @end
 
-@implementation BookRoomController
+@implementation HistoryViewController
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -34,10 +34,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"会议室列表";
+    self.title = @"预定记录";
     self.view.backgroundColor = BG_COLOR;
-    self.meetTable.delegate = self;
-    self.meetTable.dataSource = self;
+    _table = [[UITableView alloc] initWithFrame:(CGRect){0,0,kScreen_Width,kScreen_height} style:UITableViewStylePlain];
+    _table.delegate = self;
+    _table.dataSource = self;
+    [self.view addSubview:_table];
     
     [self requestHttp];
 }
@@ -48,14 +50,13 @@
 }
 
 #pragma mark - Private Method
-
 - (void)requestHttp
 {
-    //http://115.236.2.245:38019/DataDc.ashx?t=GetMetting&results=2004
-    [SVProgressHUD showWithStatus:@"加载中.."];
     NSDictionary *user = [self getUser];
+    [SVProgressHUD showWithStatus:@"加载中.."];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([RequestObject fetchWithType:@"GetMetting" withResults:[user objectForKey:@"Sid"]]) {
+        
+        if ([RequestObject fetchWithType:@"GetMyMBooking" withResults:[user objectForKey:@"Sid"]]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -71,9 +72,9 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         _list = [RequestObject requestData];
         if (_list.count != 0) {
-            [self.meetTable reloadData];
+            [_table reloadData];
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"获取到的数据为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请求的网络数据为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
         }
     });
@@ -86,8 +87,7 @@
     NSDictionary *user = [defaults objectForKey:USERNAME];
     return user;
 }
-
-#pragma mark - UITableViewDataSource
+#pragma mark - UITableVIewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _list.count;
@@ -95,25 +95,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"MyCell";
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    HistoryCell *cell = (HistoryCell *)[tableView dequeueReusableCellWithIdentifier:@"Mycell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = (HistoryCell *)[[[NSBundle mainBundle] loadNibNamed:@"HistoryCell" owner:nil options:nil] lastObject];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSDictionary *dic = _list[indexPath.row];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@(容量:%@人)",[dic objectForKey:@"Sname"],[dic objectForKey:@"Scount"]];
+    cell.dateLabel.text = [dic objectForKey:@"Sdatetime"];
+    cell.meetingRoomName.text = [dic objectForKey:@"Sname"];
+    cell.samlabel.text = [dic objectForKey:@"Sam"];
+    cell.spmLabel.text = [dic objectForKey:@"Spm"];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    MeetingBookDetailController *meeting = [[MeetingBookDetailController alloc] init];
-    meeting.dic = _list[indexPath.row];
-    [self.navigationController pushViewController:meeting animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *header = (UIView *)[[[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:nil options:nil] lastObject];
+    return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40;
+}
 @end

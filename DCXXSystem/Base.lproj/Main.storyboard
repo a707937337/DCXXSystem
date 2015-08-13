@@ -108,10 +108,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYS-bp-kJl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYS-bp-kJl">
                                 <rect key="frame" x="225" y="185" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.4452902943" green="1" blue="0.31778418380000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="meeting.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -124,10 +123,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-dk-ZGm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-dk-ZGm">
                                 <rect key="frame" x="25" y="304" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.4452902943" green="1" blue="0.31778418380000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="rule.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -146,13 +144,12 @@
                                     <constraint firstAttribute="height" constant="21" id="J39-qM-FEm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLK-3b-43J">
                                 <rect key="frame" x="125" y="304" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.4452902943" green="1" blue="0.31778418380000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -208,6 +205,7 @@
                     <connections>
                         <outlet property="bgView" destination="e0e-NF-mbV" id="YwD-Y9-bcR"/>
                         <outlet property="count_btn" destination="kSI-xF-8rG" id="RBf-f8-Y6v"/>
+                        <outlet property="fontLabel" destination="gc8-dn-KRo" id="gY4-yI-yDW"/>
                         <outlet property="reserve_btn" destination="xRy-FJ-72H" id="lZ5-Uw-p43"/>
                         <outlet property="userLabel" destination="CIa-op-Db5" id="C5r-ER-drB"/>
                     </connections>
@@ -335,11 +333,26 @@
                     <view key="view" contentMode="scaleToFill" id="SaI-A3-c8U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="OKF-EZ-gVO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OKF-EZ-gVO" secondAttribute="bottom" id="8zv-jy-shu"/>
+                            <constraint firstAttribute="trailing" secondItem="OKF-EZ-gVO" secondAttribute="trailing" id="Vlg-sF-Lym"/>
+                            <constraint firstItem="OKF-EZ-gVO" firstAttribute="leading" secondItem="SaI-A3-c8U" secondAttribute="leading" id="dYH-tD-uwQ"/>
+                            <constraint firstItem="OKF-EZ-gVO" firstAttribute="top" secondItem="SaI-A3-c8U" secondAttribute="top" id="e3T-dV-IwN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="会议室预定" id="cN5-mP-5E8">
                         <barButtonItem key="backBarButtonItem" title="返回" id="Opc-qs-ctj"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="meetTable" destination="OKF-EZ-gVO" id="Rjl-gW-kiW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pf-xw-yzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,6 +378,8 @@
     <resources>
         <image name="book.png" width="70" height="70"/>
         <image name="count.png" width="70" height="70"/>
+        <image name="meeting.png" width="70" height="70"/>
+        <image name="rule.png" width="70" height="70"/>
         <image name="user.png" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

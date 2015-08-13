@@ -7,9 +7,9 @@
 //
 
 #import "NumCountController.h"
-#import "CountObject.h"
 #import "SVProgressHUD.h"
 #import "CountDetailController.h"
+#import "RequestObject.h"
 
 @interface NumCountController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -25,7 +25,7 @@
 {
     [super viewWillDisappear:animated];
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [CountObject cancelRequest];
+        [RequestObject cancelRequest];
         [SVProgressHUD dismiss];
     }
 }
@@ -60,8 +60,9 @@
 - (void)getWebData
 {
     [SVProgressHUD showWithStatus:@"加载中..."];
+    //[CountObject fetchWithType:@"TotalBooking" withResult:
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([CountObject fetchWithType:@"TotalBooking" withResult:[self getSystemDate]]) {
+        if ([RequestObject fetchWithType:@"TotalBooking" withResults:[self getSystemDate]]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -76,7 +77,7 @@
 {
     [SVProgressHUD dismissWithSuccess:@"加载成功"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        list = [CountObject requestCount];
+        list = [RequestObject requestData];
         if (list.count != 0) {
             [self.myTableView reloadData];
         }

@@ -1,51 +1,38 @@
 //
-//  CountDetailController.m
+//  PersonDetailController.m
 //  DCXXSystem
-//
-//  Created by teddy on 15/7/30.
+//  ***********订餐人员详情***********
+//  Created by teddy on 15/8/13.
 //  Copyright (c) 2015年 teddy. All rights reserved.
 //
 
-#import "CountDetailController.h"
-#import "SVProgressHUD.h"
 #import "PersonDetailController.h"
 #import "RequestObject.h"
+#import "SVProgressHUD.h"
 
-@interface CountDetailController ()<UITableViewDataSource,UITableViewDelegate>
+@interface PersonDetailController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_table;
-    NSArray *listData;
+    NSArray *_list;//数据源
 }
 
 @end
 
-@implementation CountDetailController
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [RequestObject cancelRequest];
-        [SVProgressHUD dismiss];
-    }
-}
+@implementation PersonDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"详情";
+    self.title = [self.dic objectForKey:@"type"];
     
     self.view.backgroundColor = BG_COLOR;
-    
     _table = [[UITableView alloc] initWithFrame:(CGRect){0,0,kScreen_Width,kScreen_height} style:UITableViewStyleGrouped];
     _table.delegate = self;
     _table.dataSource = self;
     [self.view addSubview:_table];
     
-    [self getWebData];
-    
-    
+    [self requestHttp];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,17 +40,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-//获取网络数据
-- (void)getWebData
+#pragma mark - private Method
+
+- (void)requestHttp
 {
-    [SVProgressHUD showWithStatus:@"加载中..."];
-   // NSString *result = [self.restaurantName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+   // http://115.236.2.245:38019/DataDc.ashx?t=TotalBookingView2&results=72
+    [SVProgressHUD showErrorWithStatus:@"加载中.."];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([RequestObject fetchWithType:@"TotalBookingView" withResults:self.restaurantName]) {
+        if ([RequestObject fetchWithType:@"TotalBookingView2" withResults:[NSString stringWithFormat:@"%@$%@",[self.dic objectForKey:@"sid"],[self.dic objectForKey:@"sname"]]]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
-                //请求失败
                 [SVProgressHUD dismissWithError:@"加载失败"];
             });
         }
@@ -74,48 +62,37 @@
 {
     [SVProgressHUD dismissWithSuccess:@"加载成功"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        listData = [RequestObject requestData];
-        if (listData.count != 0) {
+        //更新UI
+        _list = [RequestObject requestData];
+        if (_list.count != 0) {
             [_table reloadData];
         }
     });
+    
 }
 
-
 #pragma mark - UITableViewDataSource
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return listData.count;
+    return _list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"MyCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    static NSString *identifier = @"cell";
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
-    NSDictionary *dic = listData[indexPath.row];
+    NSDictionary *dic = _list[indexPath.row];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@份",[dic objectForKey:@"type"],[dic objectForKey:@"value"]];
-    
+    cell.textLabel.text = [dic objectForKey:@"value"];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PersonDetailController *personCtrl = [[PersonDetailController alloc] init];
-    personCtrl.dic = listData[indexPath.row];
-    
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
-    back.title = @"返回";
-    self.navigationItem.backBarButtonItem = back;
-    [self.navigationController pushViewController:personCtrl animated:YES];
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end

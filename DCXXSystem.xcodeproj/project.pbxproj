@@ -24,10 +24,20 @@
 		9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F32279F1B6A18570008CE70 /* PeopleSelectController.xib */; };
 		9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */; };
 		9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */; };
-		9F3227AB1B6A26330008CE70 /* PeopleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227AA1B6A26330008CE70 /* PeopleObject.m */; };
-		9F3227AE1B6A38360008CE70 /* RestaurantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227AD1B6A38360008CE70 /* RestaurantObject.m */; };
-		9F3227B11B6A3D9C0008CE70 /* BoookObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227B01B6A3D9C0008CE70 /* BoookObject.m */; };
-		9F3227B41B6A4B090008CE70 /* CountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227B31B6A4B090008CE70 /* CountObject.m */; };
+		9F37259D1B7C2744000E9E13 /* PersonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F37259C1B7C2744000E9E13 /* PersonDetailController.m */; };
+		9F3725A11B7C4523000E9E13 /* rule@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725A01B7C4523000E9E13 /* rule@3x.png */; };
+		9F3725A41B7C452D000E9E13 /* rule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725A21B7C452D000E9E13 /* rule@2x.png */; };
+		9F3725A81B7C4536000E9E13 /* rule.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725A61B7C4536000E9E13 /* rule.png */; };
+		9F3725AB1B7C650F000E9E13 /* meeting.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725AA1B7C650F000E9E13 /* meeting.png */; };
+		9F3725AD1B7C6525000E9E13 /* meeting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725AC1B7C6525000E9E13 /* meeting@2x.png */; };
+		9F3725AF1B7C652A000E9E13 /* meeting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725AE1B7C652A000E9E13 /* meeting@3x.png */; };
+		9F3725B31B7C6C56000E9E13 /* MeetingBookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3725B11B7C6C56000E9E13 /* MeetingBookDetailController.m */; };
+		9F3725B61B7C76E5000E9E13 /* MeetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725B51B7C76E5000E9E13 /* MeetingCell.xib */; };
+		9F3725B91B7C7B43000E9E13 /* MeetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3725B81B7C7B43000E9E13 /* MeetingCell.m */; };
+		9F3725BC1B7C99D7000E9E13 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3725BB1B7C99D7000E9E13 /* HistoryViewController.m */; };
+		9F3725BF1B7C9B34000E9E13 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725BE1B7C9B34000E9E13 /* HeaderView.xib */; };
+		9F3725C11B7C9CB6000E9E13 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725C01B7C9CB6000E9E13 /* HistoryCell.xib */; };
+		9F3725C41B7C9DDE000E9E13 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3725C31B7C9DDE000E9E13 /* HistoryCell.m */; };
 		9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */; };
 		9F4F24311B79D1C100D7CBD5 /* PlanReadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24301B79D1C100D7CBD5 /* PlanReadController.m */; };
 		9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24331B79D54700D7CBD5 /* RequestObject.m */; };
@@ -98,14 +108,25 @@
 		9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailController.m; sourceTree = "<group>"; };
 		9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleDetailController.xib; sourceTree = "<group>"; };
 		9F3227A71B6A218E0008CE70 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		9F3227A91B6A26330008CE70 /* PeopleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleObject.h; sourceTree = "<group>"; };
-		9F3227AA1B6A26330008CE70 /* PeopleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleObject.m; sourceTree = "<group>"; };
-		9F3227AC1B6A38360008CE70 /* RestaurantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantObject.h; sourceTree = "<group>"; };
-		9F3227AD1B6A38360008CE70 /* RestaurantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantObject.m; sourceTree = "<group>"; };
-		9F3227AF1B6A3D9C0008CE70 /* BoookObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoookObject.h; sourceTree = "<group>"; };
-		9F3227B01B6A3D9C0008CE70 /* BoookObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoookObject.m; sourceTree = "<group>"; };
-		9F3227B21B6A4B090008CE70 /* CountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountObject.h; sourceTree = "<group>"; };
-		9F3227B31B6A4B090008CE70 /* CountObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountObject.m; sourceTree = "<group>"; };
+		9F37259B1B7C2744000E9E13 /* PersonDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailController.h; sourceTree = "<group>"; };
+		9F37259C1B7C2744000E9E13 /* PersonDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailController.m; sourceTree = "<group>"; };
+		9F3725A01B7C4523000E9E13 /* rule@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rule@3x.png"; sourceTree = "<group>"; };
+		9F3725A21B7C452D000E9E13 /* rule@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rule@2x.png"; sourceTree = "<group>"; };
+		9F3725A61B7C4536000E9E13 /* rule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rule.png; sourceTree = "<group>"; };
+		9F3725AA1B7C650F000E9E13 /* meeting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeting.png; sourceTree = "<group>"; };
+		9F3725AC1B7C6525000E9E13 /* meeting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meeting@2x.png"; sourceTree = "<group>"; };
+		9F3725AE1B7C652A000E9E13 /* meeting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meeting@3x.png"; sourceTree = "<group>"; };
+		9F3725B01B7C6C56000E9E13 /* MeetingBookDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingBookDetailController.h; sourceTree = "<group>"; };
+		9F3725B11B7C6C56000E9E13 /* MeetingBookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingBookDetailController.m; sourceTree = "<group>"; };
+		9F3725B51B7C76E5000E9E13 /* MeetingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingCell.xib; sourceTree = "<group>"; };
+		9F3725B71B7C7B43000E9E13 /* MeetingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingCell.h; sourceTree = "<group>"; };
+		9F3725B81B7C7B43000E9E13 /* MeetingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingCell.m; sourceTree = "<group>"; };
+		9F3725BA1B7C99D7000E9E13 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		9F3725BB1B7C99D7000E9E13 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		9F3725BE1B7C9B34000E9E13 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		9F3725C01B7C9CB6000E9E13 /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		9F3725C21B7C9DDE000E9E13 /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		9F3725C31B7C9DDE000E9E13 /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRoomController.h; sourceTree = "<group>"; };
 		9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRoomController.m; sourceTree = "<group>"; };
 		9F4F242F1B79D1C100D7CBD5 /* PlanReadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanReadController.h; sourceTree = "<group>"; };
@@ -201,6 +222,7 @@
 		9F3227531B69FF820008CE70 /* DCXXSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9F3725BD1B7C9B10000E9E13 /* CustomView */,
 				9F4F242E1B79D1AF00D7CBD5 /* PlanRead */,
 				9F4F242A1B79D16D00D7CBD5 /* MeetRoomBook */,
 				9F5ECFFC1B6B00650062BAAF /* customCell */,
@@ -280,6 +302,8 @@
 				9F3227861B6A052B0008CE70 /* NumCountController.m */,
 				9F3227901B6A0F310008CE70 /* CountDetailController.h */,
 				9F3227911B6A0F310008CE70 /* CountDetailController.m */,
+				9F37259B1B7C2744000E9E13 /* PersonDetailController.h */,
+				9F37259C1B7C2744000E9E13 /* PersonDetailController.m */,
 			);
 			name = Count;
 			sourceTree = "<group>";
@@ -287,6 +311,8 @@
 		9F3227931B6A13620008CE70 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				9F3725A61B7C4536000E9E13 /* rule.png */,
+				9F3725AA1B7C650F000E9E13 /* meeting.png */,
 				9F5ECFF81B6AF4E00062BAAF /* book.png */,
 				9F5ED0041B6B063D0062BAAF /* user.png */,
 				9F5ECFF91B6AF4E00062BAAF /* count.png */,
@@ -297,6 +323,8 @@
 		9F3227941B6A13680008CE70 /* image@2x */ = {
 			isa = PBXGroup;
 			children = (
+				9F3725AC1B7C6525000E9E13 /* meeting@2x.png */,
+				9F3725A21B7C452D000E9E13 /* rule@2x.png */,
 				9F5ECFF41B6AF4D80062BAAF /* book@2x.png */,
 				9F5ED0021B6B06380062BAAF /* user@2x.png */,
 				9F5ECFF51B6AF4D80062BAAF /* count@2x.png */,
@@ -307,6 +335,8 @@
 		9F3227951B6A136F0008CE70 /* image@3x */ = {
 			isa = PBXGroup;
 			children = (
+				9F3725AE1B7C652A000E9E13 /* meeting@3x.png */,
+				9F3725A01B7C4523000E9E13 /* rule@3x.png */,
 				9F5ED0001B6B06300062BAAF /* user@3x.png */,
 				9F5ECFF01B6AF4D10062BAAF /* book@3x.png */,
 				9F5ECFF11B6AF4D10062BAAF /* count@3x.png */,
@@ -330,14 +360,6 @@
 		9F3227A81B6A261D0008CE70 /* https */ = {
 			isa = PBXGroup;
 			children = (
-				9F3227A91B6A26330008CE70 /* PeopleObject.h */,
-				9F3227AA1B6A26330008CE70 /* PeopleObject.m */,
-				9F3227AC1B6A38360008CE70 /* RestaurantObject.h */,
-				9F3227AD1B6A38360008CE70 /* RestaurantObject.m */,
-				9F3227AF1B6A3D9C0008CE70 /* BoookObject.h */,
-				9F3227B01B6A3D9C0008CE70 /* BoookObject.m */,
-				9F3227B21B6A4B090008CE70 /* CountObject.h */,
-				9F3227B31B6A4B090008CE70 /* CountObject.m */,
 				9F4F24321B79D54700D7CBD5 /* RequestObject.h */,
 				9F4F24331B79D54700D7CBD5 /* RequestObject.m */,
 				9F4F24381B79DCF900D7CBD5 /* FIleDownLoad.h */,
@@ -346,11 +368,23 @@
 			name = https;
 			sourceTree = "<group>";
 		};
+		9F3725BD1B7C9B10000E9E13 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				9F3725BE1B7C9B34000E9E13 /* HeaderView.xib */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		9F4F242A1B79D16D00D7CBD5 /* MeetRoomBook */ = {
 			isa = PBXGroup;
 			children = (
 				9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */,
 				9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */,
+				9F3725B01B7C6C56000E9E13 /* MeetingBookDetailController.h */,
+				9F3725B11B7C6C56000E9E13 /* MeetingBookDetailController.m */,
+				9F3725BA1B7C99D7000E9E13 /* HistoryViewController.h */,
+				9F3725BB1B7C99D7000E9E13 /* HistoryViewController.m */,
 			);
 			name = MeetRoomBook;
 			sourceTree = "<group>";
@@ -384,6 +418,12 @@
 			children = (
 				9F5ECFFD1B6B00820062BAAF /* ResturantCell.h */,
 				9F5ECFFE1B6B00820062BAAF /* ResturantCell.m */,
+				9F3725B71B7C7B43000E9E13 /* MeetingCell.h */,
+				9F3725B81B7C7B43000E9E13 /* MeetingCell.m */,
+				9F3725B51B7C76E5000E9E13 /* MeetingCell.xib */,
+				9F3725C01B7C9CB6000E9E13 /* HistoryCell.xib */,
+				9F3725C21B7C9DDE000E9E13 /* HistoryCell.h */,
+				9F3725C31B7C9DDE000E9E13 /* HistoryCell.m */,
 			);
 			name = customCell;
 			sourceTree = "<group>";
@@ -485,21 +525,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F51A38F1B71EC5A00561A61 /* PushConfig.plist in Resources */,
+				9F3725BF1B7C9B34000E9E13 /* HeaderView.xib in Resources */,
 				9F5ECFF71B6AF4D80062BAAF /* count@2x.png in Resources */,
+				9F3725A11B7C4523000E9E13 /* rule@3x.png in Resources */,
 				9F5ECFF61B6AF4D80062BAAF /* book@2x.png in Resources */,
+				9F3725AB1B7C650F000E9E13 /* meeting.png in Resources */,
+				9F3725A41B7C452D000E9E13 /* rule@2x.png in Resources */,
+				9F3725AD1B7C6525000E9E13 /* meeting@2x.png in Resources */,
 				9F3227601B69FF820008CE70 /* Main.storyboard in Resources */,
 				9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */,
+				9F3725C11B7C9CB6000E9E13 /* HistoryCell.xib in Resources */,
 				9F5ECFFB1B6AF4E00062BAAF /* count.png in Resources */,
 				9F5ECFF21B6AF4D10062BAAF /* book@3x.png in Resources */,
 				9F3227621B69FF820008CE70 /* Images.xcassets in Resources */,
+				9F3725A81B7C4536000E9E13 /* rule.png in Resources */,
 				9F32278F1B6A08510008CE70 /* OrderDetailController.xib in Resources */,
 				9F5ECFFA1B6AF4E00062BAAF /* book.png in Resources */,
 				9F5ED0051B6B063D0062BAAF /* user.png in Resources */,
 				9F51A3921B7203BE00561A61 /* sound.caf in Resources */,
 				9F32277E1B6A046B0008CE70 /* SVProgressHUD.bundle in Resources */,
 				9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */,
+				9F3725B61B7C76E5000E9E13 /* MeetingCell.xib in Resources */,
 				9F5ED0031B6B06380062BAAF /* user@2x.png in Resources */,
 				9F5ED0011B6B06300062BAAF /* user@3x.png in Resources */,
+				9F3725AF1B7C652A000E9E13 /* meeting@3x.png in Resources */,
 				9F5ECFF31B6AF4D10062BAAF /* count@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,13 +600,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F3227AB1B6A26330008CE70 /* PeopleObject.m in Sources */,
 				9F32275D1B69FF820008CE70 /* ViewController.m in Sources */,
-				9F3227B41B6A4B090008CE70 /* CountObject.m in Sources */,
 				9F32277F1B6A046B0008CE70 /* SVProgressHUD.m in Sources */,
 				9F3227921B6A0F310008CE70 /* CountDetailController.m in Sources */,
 				9F3227A01B6A18570008CE70 /* PeopleSelectController.m in Sources */,
 				9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */,
+				9F3725BC1B7C99D7000E9E13 /* HistoryViewController.m in Sources */,
 				9F3227871B6A052B0008CE70 /* NumCountController.m in Sources */,
 				9F4F24371B79D99300D7CBD5 /* PlanListController.m in Sources */,
 				9F32275A1B69FF820008CE70 /* AppDelegate.m in Sources */,
@@ -565,13 +613,15 @@
 				9F4F24311B79D1C100D7CBD5 /* PlanReadController.m in Sources */,
 				9F32278E1B6A08510008CE70 /* OrderDetailController.m in Sources */,
 				9F4F243A1B79DCF900D7CBD5 /* FIleDownLoad.m in Sources */,
-				9F3227AE1B6A38360008CE70 /* RestaurantObject.m in Sources */,
+				9F3725B31B7C6C56000E9E13 /* MeetingBookDetailController.m in Sources */,
+				9F3725B91B7C7B43000E9E13 /* MeetingCell.m in Sources */,
 				9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */,
+				9F3725C41B7C9DDE000E9E13 /* HistoryCell.m in Sources */,
 				9F3227821B6A04C40008CE70 /* RestaurantViewController.m in Sources */,
 				9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */,
-				9F3227B11B6A3D9C0008CE70 /* BoookObject.m in Sources */,
 				9F4F243D1B79E73E00D7CBD5 /* PDFViewController.m in Sources */,
 				9F5ECFFF1B6B00820062BAAF /* ResturantCell.m in Sources */,
+				9F37259D1B7C2744000E9E13 /* PersonDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,8 +741,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chen zhichao (4SDAXW4J3Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DCXXSystem/PrefixHeader.pch";
 				INFOPLIST_FILE = DCXXSystem/Info.plist;
@@ -703,7 +753,7 @@
 					"$(PROJECT_DIR)/DCXXSystem",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c1b456a3-3875-4e87-bdb3-9a305b20f4d1";
+				PROVISIONING_PROFILE = "4d26bc01-ad88-40c3-be0f-bd2df9bd4e6a";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -714,8 +764,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chen zhichao (4SDAXW4J3Z)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DCXXSystem/PrefixHeader.pch";
 				INFOPLIST_FILE = DCXXSystem/Info.plist;
@@ -726,7 +776,7 @@
 					"$(PROJECT_DIR)/DCXXSystem",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c1b456a3-3875-4e87-bdb3-9a305b20f4d1";
+				PROVISIONING_PROFILE = "4d26bc01-ad88-40c3-be0f-bd2df9bd4e6a";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

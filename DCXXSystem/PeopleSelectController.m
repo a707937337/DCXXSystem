@@ -8,8 +8,8 @@
 
 #import "PeopleSelectController.h"
 #import "SVProgressHUD.h"
-#import "PeopleObject.h"
 #import "PeopleDetailController.h"
+#import "RequestObject.h"
 
 @interface PeopleSelectController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -25,7 +25,7 @@
 {
     [super viewWillDisappear:animated];
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [PeopleObject cancelRequest];
+        [RequestObject cancelRequest];
         [SVProgressHUD dismiss];
     }
 }
@@ -79,8 +79,10 @@
 - (void)getWebData
 {
     [SVProgressHUD showWithStatus:@"加载中..."];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([PeopleObject fetch:@"" withLevel:@"0"]) {
+        if ([RequestObject fetchWithType:@"GetDept" withResults:@"0$"]) {
+           // [PeopleObject fetch:@"" withLevel:@"0"];
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -95,7 +97,7 @@
 {
     [SVProgressHUD dismissWithSuccess:@"加载成功"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        listData = [PeopleObject requestData];
+        listData = [RequestObject requestData];
         if (listData.count != 0) {
             [self.companyTableView reloadData];
         }

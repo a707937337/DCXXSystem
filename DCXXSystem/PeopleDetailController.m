@@ -7,8 +7,9 @@
 //
 
 #import "PeopleDetailController.h"
-#import "PeopleObject.h"
+//#import "PeopleObject.h"
 #import "SVProgressHUD.h"
+#import "RequestObject.h"
 
 @interface PeopleDetailController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -25,7 +26,7 @@
 {
     [super viewWillDisappear:animated];
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [PeopleObject cancelRequest];
+        [RequestObject cancelRequest];
         [SVProgressHUD dismiss];
     }
 }
@@ -33,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.view.backgroundColor = BG_COLOR;
     
     _tableView = [[UITableView alloc] initWithFrame:(CGRect){0,0,kScreen_Width,kScreen_height} style:UITableViewStyleGrouped];
     _tableView.delegate = self;
@@ -63,8 +66,9 @@
 - (void)getWebData
 {
     [SVProgressHUD showWithStatus:@"加载中..."];
+    NSString *resluts = [NSString stringWithFormat:@"1$%@",self.sid];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([PeopleObject fetch:self.sid withLevel:@"1"]) {
+        if ([RequestObject fetchWithType:@"GetDept" withResults:resluts]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -79,7 +83,7 @@
 {
     [SVProgressHUD dismissWithSuccess:@"加载成功"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        listData = [PeopleObject requestData];
+        listData = [RequestObject requestData];
         if (listData.count != 0) {
             [_tableView reloadData];
         }

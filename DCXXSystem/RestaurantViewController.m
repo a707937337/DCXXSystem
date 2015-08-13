@@ -8,9 +8,9 @@
 
 #import "RestaurantViewController.h"
 #import "OrderDetailController.h"
-#import "RestaurantObject.h"
 #import "SVProgressHUD.h"
 #import "ResturantCell.h"
+#import "RequestObject.h"
 
 @interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -26,7 +26,7 @@
 {
     [super viewWillDisappear:animated];
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [RestaurantObject cancelRequest];
+        [RequestObject cancelRequest];
         [SVProgressHUD dismiss];
     }
 }
@@ -48,7 +48,8 @@
 {
     [SVProgressHUD showWithStatus:@"加载中..."];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([RestaurantObject fetchWithPersonID:self.personId]) {
+        if ([RequestObject fetchWithType:@"GetRefectory" withResults:self.personId]) {
+            //[RestaurantObject fetchWithPersonID:self.personId]
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -63,7 +64,7 @@
 {
     [SVProgressHUD dismissWithSuccess:@"加载成功"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        list = [RestaurantObject requestData];
+        list = [RequestObject requestData];
         if (list.count != 0) {
             [self.myTableView reloadData];
         }else{

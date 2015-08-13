@@ -9,12 +9,16 @@
 #import "ViewController.h"
 #import "PeopleSelectController.h"
 #import "RestaurantViewController.h"
+#import "SVProgressHUD.h"
+#import "RequestObject.h"
 
 @interface ViewController ()<UIAlertViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *reserve_btn;
 @property (weak, nonatomic) IBOutlet UIButton *count_btn;
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *fontLabel;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 - (IBAction)selectPeopleAction:(id)sender;
 - (IBAction)bookAction:(id)sender;
@@ -63,10 +67,24 @@
     
     self.userLabel.font = [UIFont boldSystemFontOfSize:17];
     
-    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
+    self.view.backgroundColor = BG_COLOR;
     
     [self insertColorGradient];
     
+    //暂时隐藏
+    self.fontLabel.textColor = BG_COLOR;
+    
+    UIButton *update_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    update_btn.frame = (CGRect){0,0,40,20};
+    update_btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    update_btn.titleLabel.textColor = [UIColor whiteColor];
+    [update_btn setTitle:@"更新" forState:UIControlStateNormal];
+    [update_btn addTarget:self action:@selector(updateSystemAction) forControlEvents:UIControlEventTouchUpInside];
+    update_btn.layer.borderColor = [UIColor whiteColor].CGColor;
+    update_btn.layer.borderWidth = 0.5;
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:update_btn];
+    self.navigationItem.rightBarButtonItem = right;
 }
 
 - (void)insertColorGradient
@@ -112,6 +130,69 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - updateSystem
+- (void)updateSystemAction
+{
+    [self requestHttp];
+}
+
+#pragma mark - Private Method
+- (void)requestHttp
+{
+    [SVProgressHUD showWithStatus:@"加载中.."];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        if ([RequestObject fetchWithType:@"CheckVersion" withResults:@"ios"]) {
+            [self updateUI];
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismissWithError:@"加载失败"];
+            });
+        }
+    });
+}
+
+- (void)updateUI
+{
+    [SVProgressHUD dismissWithSuccess:@"加载成功"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSArray *list = [RequestObject requestData];
+        if (list.count != 0) {
+            NSString *ver =  [list[0] objectForKey:@"strThisVersion"];
+            if ([self compareWithAppVersion:ver]) {
+                //更新
+                NSString *str = [NSString stringWithFormat:@"当前有最新版本%@,是否立即更新",ver];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:str delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
+                alert.tag = 1001;//表示更新
+                [alert show];
+            }
+            
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请求的网络数据为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    });
+}
+
+//版本比较，有新版本返回YES，无新版本返回NO
+- (BOOL)compareWithAppVersion:(NSString *)version
+{
+    if (![version isEqualToString:@""]) {
+        //先获取当前软件版本号
+        NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        
+        if (![version isEqualToString:currentVersion]) {
+            //有新版本
+            return YES;
+        }else{
+            //没有新版本
+            return NO;
+        }
+    }else{
+        //版本号为空，不更新
+        return NO;
+    }
+}
 
 - (IBAction)selectPeopleAction:(id)sender {
     //选择人员信息
@@ -141,9 +222,18 @@
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0) {
-        //直接进入组织架构选人
-        [self performSelector:@selector(selectPeopleAction:) withObject:nil];
+    if (alertView.tag == 1001) {
+        if (buttonIndex == 1){
+            //更新
+            NSString *str = [NSString stringWithFormat:@"http://115.236.2.245:38019/dcxx.html"];
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+        }
+    }else{
+        if (buttonIndex == 0) {
+            //直接进入组织架构选人
+            [self performSelector:@selector(selectPeopleAction:) withObject:nil];
+        }
     }
 }
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "OrderDetailController.h"
-#import "BoookObject.h"
 #import "SVProgressHUD.h"
+#import "RequestObject.h"
 
 @interface OrderDetailController ()<UIAlertViewDelegate>
 {
@@ -90,8 +90,9 @@
 - (void)getWeb:(NSString *)result withType:(NSString *)type
 {
     [SVProgressHUD showWithStatus:@"加载中..."];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([BoookObject fetch:type withResult:result]) {
+        if ([RequestObject fetchWithType:type withResults:result]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -106,7 +107,7 @@
 {
     [SVProgressHUD dismissWithSuccess:@"加载成功"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        resposeArr = [BoookObject requestDic];
+        resposeArr = [RequestObject requestData];
         NSDictionary *resResult = [resposeArr lastObject];
         if ([[resResult objectForKey:@"success"] isEqualToString:@"true"]) {
             _isOK = YES;
