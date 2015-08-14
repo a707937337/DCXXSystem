@@ -114,7 +114,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rhu-7v-gUw" kind="push" id="e9B-tz-Cf6"/>
+                                    <action selector="bookMeetingRoomAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KbT-cJ-Gt9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会议室预定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGV-6X-R4A">
@@ -209,6 +209,7 @@
                         <outlet property="fontLabel" destination="gc8-dn-KRo" id="gY4-yI-yDW"/>
                         <outlet property="reserve_btn" destination="xRy-FJ-72H" id="lZ5-Uw-p43"/>
                         <outlet property="userLabel" destination="CIa-op-Db5" id="C5r-ER-drB"/>
+                        <segue destination="rhu-7v-gUw" kind="push" identifier="meetingRoom" id="zNc-n9-XWD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

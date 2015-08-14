@@ -44,7 +44,7 @@
 
 - (void)requestHttp
 {
-   // http://115.236.2.245:38019/DataDc.ashx?t=TotalBookingView2&results=72
+   // http://115.236.2.245:38019/DataDc.ashx?t=TotalBookingView2&results=72$
     [SVProgressHUD showErrorWithStatus:@"加载中.."];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

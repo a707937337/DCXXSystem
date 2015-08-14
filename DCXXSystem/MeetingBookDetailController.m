@@ -76,6 +76,7 @@
         _list = [RequestObject requestData];
         if (_list.count != 0) {
             [_table reloadData];
+            NSLog(@"请求的数据时:%@",_list);
         }else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请求的网络数据为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
@@ -117,6 +118,10 @@
                                                                  [dic objectForKey:@"Weekday"],
                                                                  [dic objectForKey:@"Sap"]];
     if ([[dic objectForKey:@"Szt"] rangeOfString:@"true"].length > 0) {
+        if ([[dic objectForKey:@"MyBooking"] rangeOfString:@"true"].length > 0) {
+            //表示本人预定的
+            cell.dateLabel.textColor = [UIColor redColor];
+        }
         //已经预定
         cell.bookbtn.backgroundColor = [UIColor lightGrayColor];
         cell.bookbtn.userInteractionEnabled = NO;//不可操作
@@ -127,10 +132,27 @@
     return cell;
 }
 
+//做点击取消预定功能
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *dic = _list[indexPath.row];
+    if ([[dic objectForKey:@"MyBooking"] rangeOfString:@"true"].length > 0) {
+        NSString *time = nil;//表示上下午：0表示上午；1表示下午
+        if ([[dic objectForKey:@"Sap"] rangeOfString:@"上午"].length > 0){
+            time = @"0";
+        }else{
+            time = @"1";
+        }
+        _results = [NSString stringWithFormat:@"%@$%@",[dic objectForKey:@"ID"],time];
+        //点击取消
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"是否取消预定" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alert.tag = 1002;//
+        [alert show];
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -155,8 +177,8 @@
     _results = [NSString stringWithFormat:@"%@$%@$%@$%@",[user objectForKey:@"Sid"],[dic objectForKey:@"Mid"],[dic objectForKey:@"Day"],sap];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择是否需要投影仪" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"大投影仪", @"小投影仪",@"不需要，只预定",nil];
+    alert.tag = 1001;
     [alert show];
-    //[self bookMeetingRoom:result];
 }
 
 #pragma mark - BookRoomAction
@@ -184,7 +206,6 @@
         if (list.count != 0) {
             if ([[dic objectForKey:@"success"] isEqualToString:@"true"]) {
                 //成功直接刷新界面
-               // [SVProgressHUD dismissWithSuccess:@"预约成功"];
                 [self requestHttp];
                 //
             }else{
@@ -194,27 +215,89 @@
     });
 }
 
+#pragma mark - cancel Book room 
+- (void)cancelBook:(NSString *)result
+{
+   // http://115.236.2.245:38019/DataDc.ashx?t=CanelMBooking&results=41$1
+    
+    [SVProgressHUD showWithStatus:@"取消中.."];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        if ([RequestObject fetchWithType:@"CanelMBooking" withResults:result]) {
+            [self cancelResult];
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismissWithError:@"加载失败"];
+            });
+        }
+    });
+}
+
+- (void)cancelResult
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSArray *list = [RequestObject requestData];
+        NSDictionary *dic = [list lastObject];
+        if (list.count != 0) {
+            if ([[dic objectForKey:@"success"] isEqualToString:@"true"]) {
+                //成功直接刷新界面
+                [self requestHttp];
+                //
+            }else{
+                [SVProgressHUD dismissWithError:@"取消失败"];
+            }
+        }
+    });
+}
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString *machine = nil;
-    if (buttonIndex == 0) {
-        [alertView dismissWithClickedButtonIndex:0 animated:YES];
-        return;
-    }else
-    if (buttonIndex == 1){
-        //大投影
-        machine = @"1";//表示大投影仪
-    }else if (buttonIndex == 2){
-        //小投影
-        machine = @"2";//表示小投影仪
+    if (alertView.tag == 1001) {
+        NSString *machine = nil;
+//        if (buttonIndex == 0) {
+//            [alertView dismissWithClickedButtonIndex:0 animated:YES];
+//            return;
+//        }else
+//            if (buttonIndex == 1){
+//                //大投影
+//                machine = @"1";//表示大投影仪
+//            }else if (buttonIndex == 2){
+//                //小投影
+//                machine = @"2";//表示小投影仪
+//            }else{
+//                //不需要
+//                machine = @"0";//代表不用投影仪
+//            }
+        switch (buttonIndex) {
+            case 0:
+                [alertView dismissWithClickedButtonIndex:0 animated:YES];
+                return;
+                break;
+            case 1:
+                //大投影
+                machine = @"1";//表示大投影仪
+                break;
+            case 2:
+                //小投影
+                machine = @"2";//表示小投影仪
+                break;
+            case 3:
+                //不需要
+                machine = @"0";//代表不用投影仪
+                break;
+            default:
+                break;
+        }
+        NSString *res = [NSString stringWithFormat:@"%@$%@",_results,machine];
+        //预定
+        [self bookMeetingRoom:res];
     }else{
-        //不需要
-        machine = @"0";//代表不用投影仪
+        //表示取消的alert
+        if (buttonIndex == 1) {
+            //取消服务
+            [self cancelBook:_results];
+        }
     }
-    NSString *res = [NSString stringWithFormat:@"%@$%@",_results,machine];
-    //预定
-    [self bookMeetingRoom:res];
 }
 
 @end

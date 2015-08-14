@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 - (IBAction)selectPeopleAction:(id)sender;
 - (IBAction)bookAction:(id)sender;
+- (IBAction)bookMeetingRoomAction:(id)sender;
 
 
 @end
@@ -213,15 +214,31 @@
     NSString *Sid = (NSString *)[user objectForKey:@"Sid"];
     if ([name length] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先选择订餐人员" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        alert.tag = 1002;
         [alert show];
         return;
     }
-    
     //[self.navigationController performSegueWithIdentifier:@"bookPush" sender:nil];
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     RestaurantViewController *restaurant = [story instantiateViewControllerWithIdentifier:@"BookController"];
     restaurant.personId = Sid;//将人员编号传递进去
     [self.navigationController pushViewController:restaurant animated:YES];
+}
+
+
+
+//进入会议室预定
+- (IBAction)bookMeetingRoomAction:(id)sender
+{
+    NSDictionary *user = [self getUserName];
+    NSString *name = (NSString *)[user objectForKey:@"Sname"];
+    if ([name length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先选择预定人员" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        alert.tag = 1002;
+        [alert show];
+        return;
+    }
+    [self performSegueWithIdentifier:@"meetingRoom" sender:nil];
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -234,7 +251,7 @@
             
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
         }
-    }else{
+    }else if(alertView.tag == 1002){
         if (buttonIndex == 0) {
             //直接进入组织架构选人
             [self performSelector:@selector(selectPeopleAction:) withObject:nil];

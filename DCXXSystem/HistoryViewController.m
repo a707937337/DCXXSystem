@@ -132,6 +132,7 @@
             [self.myTimeView refrushTableView:_stations];
             [_table reloadData];
         }else{
+            [SVProgressHUD dismiss];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请求的网络数据为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
         }
