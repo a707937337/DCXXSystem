@@ -54,14 +54,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //设置UINavigationbar
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:133/255.0 blue:50/255.0 alpha:1];//背景颜色
+    //self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:133/255.0 blue:50/255.0 alpha:1];//背景颜色
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
    // [self insertBarGradient];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];//返回按钮的颜色
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:19]}];//设置标题的样式
     self.navigationController.navigationBar.translucent = YES;//不模糊
     
-  //  self.bgView.backgroundColor =  [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
-    self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.bgView.backgroundColor =  [UIColor colorWithRed:234/255.0 green:86/255.0 blue:14/255.0 alpha:0.8];
+   // self.bgView.layer.borderColor = [UIColor whiteColor].CGColor;
    // self.bgView.translatesAutoresizingMaskIntoConstraints = NO;
    // self.bgView.layer.borderWidth = 1;
     
@@ -69,7 +70,8 @@
     
     self.view.backgroundColor = BG_COLOR;
     
-    [self insertColorGradient];
+    //颜色渐变
+   // [self insertColorGradient];
     
     //暂时隐藏
     self.fontLabel.textColor = BG_COLOR;
@@ -164,6 +166,9 @@
                 NSString *str = [NSString stringWithFormat:@"当前有最新版本%@,是否立即更新",ver];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:str delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
                 alert.tag = 1001;//表示更新
+                [alert show];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前已是最新版本" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                 [alert show];
             }
             

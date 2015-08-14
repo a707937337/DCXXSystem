@@ -10,6 +10,7 @@
 #import "RequestObject.h"
 #import "SVProgressHUD.h"
 #import "MeetingBookDetailController.h"
+#import "HistoryViewController.h"
 
 @interface BookRoomController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -39,6 +40,8 @@
     self.meetTable.delegate = self;
     self.meetTable.dataSource = self;
     
+    [self initBar];
+    
     [self requestHttp];
 }
 
@@ -47,6 +50,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)initBar
+{
+    UIButton *update_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    update_btn.frame = (CGRect){0,0,60,20};
+    update_btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    update_btn.titleLabel.textColor = [UIColor whiteColor];
+    [update_btn setTitle:@"预定情况" forState:UIControlStateNormal];
+    [update_btn addTarget:self action:@selector(bookedCountAction) forControlEvents:UIControlEventTouchUpInside];
+    update_btn.layer.borderColor = [UIColor whiteColor].CGColor;
+    update_btn.layer.borderWidth = 0.5;
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:update_btn];
+    self.navigationItem.rightBarButtonItem = right;
+}
+
+//我的预定
+- (void)bookedCountAction
+{
+    HistoryViewController *history = [[HistoryViewController alloc] init];
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
+    back.title = @"返回";
+    self.navigationItem.backBarButtonItem = back;
+    [self.navigationController pushViewController:history animated:YES];
+}
 #pragma mark - Private Method
 
 - (void)requestHttp

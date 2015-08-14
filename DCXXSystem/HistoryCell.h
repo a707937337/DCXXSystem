@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HistoryCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *meetingRoomName;
-@property (weak, nonatomic) IBOutlet UILabel *samlabel;
-@property (weak, nonatomic) IBOutlet UILabel *spmLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *meetingRoomName; //会议室名称
+@property (weak, nonatomic) IBOutlet UILabel *bookTimeLabel; //预定时间
+@property (weak, nonatomic) IBOutlet UILabel *departmentLabel; //部门名称
+@property (weak, nonatomic) IBOutlet UILabel *machineLabel;//是否需要投影
 @end

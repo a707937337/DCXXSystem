@@ -14,6 +14,7 @@
     // Initialization code
     
     self.bookbtn.layer.cornerRadius = 8;
+    self.bookbtn.titleLabel.font = [UIFont systemFontOfSize:14];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
