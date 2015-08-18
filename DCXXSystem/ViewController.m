@@ -13,6 +13,9 @@
 #import "RequestObject.h"
 
 @interface ViewController ()<UIAlertViewDelegate>
+{
+    NSString *_url;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *reserve_btn;
 @property (weak, nonatomic) IBOutlet UIButton *count_btn;
@@ -162,6 +165,7 @@
         NSArray *list = [RequestObject requestData];
         if (list.count != 0) {
             NSString *ver =  [list[0] objectForKey:@"strThisVersion"];
+            _url = [list[0] objectForKey:@"strGetNewVersionURL"];
             if ([self compareWithAppVersion:ver]) {
                 //更新
                 NSString *str = [NSString stringWithFormat:@"当前有最新版本%@,是否立即更新",ver];
@@ -247,9 +251,9 @@
     if (alertView.tag == 1001) {
         if (buttonIndex == 1){
             //更新
-            NSString *str = [NSString stringWithFormat:@"http://115.236.2.245:38019/dcxx.html"];
+           // NSString *str = [NSString stringWithFormat:@"http://115.236.2.245:38019/dcxx.html"];
             
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_url]];
         }
     }else if(alertView.tag == 1002){
         if (buttonIndex == 0) {

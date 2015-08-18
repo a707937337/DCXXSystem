@@ -62,15 +62,18 @@
     [APService registerDeviceToken:deviceToken];
 }
 
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     // Required
     [APService handleRemoteNotification:userInfo];
+    NSLog(@"接收到新消息");
     
 }
 
 
 //ios 7接收消息的机制
+//ios 8消息回调
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     
@@ -99,9 +102,11 @@
             NSLog(@"error == %@",[myError description]);
         }
         
-        [myBackMusic setVolume:3];
+        [myBackMusic setVolume:15];
         myBackMusic.numberOfLoops = 0;
-        [myBackMusic prepareToPlay];
+        if ([myBackMusic prepareToPlay]) {
+            [myBackMusic play];
+        }
         //调用振动
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         
@@ -127,6 +132,7 @@
     //进入程序
     [application setApplicationIconBadgeNumber:0];
     [APService setBadge:0];
+    NSLog(@"清空标记");
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
