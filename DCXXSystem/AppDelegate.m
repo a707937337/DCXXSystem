@@ -102,7 +102,7 @@
             NSLog(@"error == %@",[myError description]);
         }
         
-        [myBackMusic setVolume:15];
+        [myBackMusic setVolume:10];
         myBackMusic.numberOfLoops = 0;
         if ([myBackMusic prepareToPlay]) {
             [myBackMusic play];

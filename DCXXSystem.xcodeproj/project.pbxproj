@@ -24,6 +24,10 @@
 		9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F32279F1B6A18570008CE70 /* PeopleSelectController.xib */; };
 		9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */; };
 		9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */; };
+		9F32EB151B8D575B00D0B75E /* BookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32EB131B8D575B00D0B75E /* BookDetailController.m */; };
+		9F32EB191B8D8C4600D0B75E /* selectTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F32EB181B8D8C4600D0B75E /* selectTimeCell.xib */; };
+		9F32EB1C1B8D8CFA00D0B75E /* SelectTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32EB1B1B8D8CFA00D0B75E /* SelectTimeCell.m */; };
+		9F32EB1F1B8D91CD00D0B75E /* LIstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32EB1E1B8D91CD00D0B75E /* LIstViewController.m */; };
 		9F37259D1B7C2744000E9E13 /* PersonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F37259C1B7C2744000E9E13 /* PersonDetailController.m */; };
 		9F3725A11B7C4523000E9E13 /* rule@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725A01B7C4523000E9E13 /* rule@3x.png */; };
 		9F3725A41B7C452D000E9E13 /* rule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F3725A21B7C452D000E9E13 /* rule@2x.png */; };
@@ -110,6 +114,13 @@
 		9F3227A31B6A1FF50008CE70 /* PeopleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDetailController.m; sourceTree = "<group>"; };
 		9F3227A41B6A1FF50008CE70 /* PeopleDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleDetailController.xib; sourceTree = "<group>"; };
 		9F3227A71B6A218E0008CE70 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9F32EB121B8D575B00D0B75E /* BookDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailController.h; sourceTree = "<group>"; };
+		9F32EB131B8D575B00D0B75E /* BookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailController.m; sourceTree = "<group>"; };
+		9F32EB181B8D8C4600D0B75E /* selectTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectTimeCell.xib; sourceTree = "<group>"; };
+		9F32EB1A1B8D8CFA00D0B75E /* SelectTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTimeCell.h; sourceTree = "<group>"; };
+		9F32EB1B1B8D8CFA00D0B75E /* SelectTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTimeCell.m; sourceTree = "<group>"; };
+		9F32EB1D1B8D91CD00D0B75E /* LIstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIstViewController.h; sourceTree = "<group>"; };
+		9F32EB1E1B8D91CD00D0B75E /* LIstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIstViewController.m; sourceTree = "<group>"; };
 		9F37259B1B7C2744000E9E13 /* PersonDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailController.h; sourceTree = "<group>"; };
 		9F37259C1B7C2744000E9E13 /* PersonDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailController.m; sourceTree = "<group>"; };
 		9F3725A01B7C4523000E9E13 /* rule@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rule@3x.png"; sourceTree = "<group>"; };
@@ -376,6 +387,16 @@
 			name = https;
 			sourceTree = "<group>";
 		};
+		9F32EB171B8D8C0600D0B75E /* CusCell */ = {
+			isa = PBXGroup;
+			children = (
+				9F32EB181B8D8C4600D0B75E /* selectTimeCell.xib */,
+				9F32EB1A1B8D8CFA00D0B75E /* SelectTimeCell.h */,
+				9F32EB1B1B8D8CFA00D0B75E /* SelectTimeCell.m */,
+			);
+			name = CusCell;
+			sourceTree = "<group>";
+		};
 		9F3725BD1B7C9B10000E9E13 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,12 +420,17 @@
 		9F4F242A1B79D16D00D7CBD5 /* MeetRoomBook */ = {
 			isa = PBXGroup;
 			children = (
+				9F32EB171B8D8C0600D0B75E /* CusCell */,
 				9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */,
 				9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */,
 				9F3725B01B7C6C56000E9E13 /* MeetingBookDetailController.h */,
 				9F3725B11B7C6C56000E9E13 /* MeetingBookDetailController.m */,
 				9F3725BA1B7C99D7000E9E13 /* HistoryViewController.h */,
 				9F3725BB1B7C99D7000E9E13 /* HistoryViewController.m */,
+				9F32EB121B8D575B00D0B75E /* BookDetailController.h */,
+				9F32EB131B8D575B00D0B75E /* BookDetailController.m */,
+				9F32EB1D1B8D91CD00D0B75E /* LIstViewController.h */,
+				9F32EB1E1B8D91CD00D0B75E /* LIstViewController.m */,
 			);
 			name = MeetRoomBook;
 			sourceTree = "<group>";
@@ -554,6 +580,7 @@
 				9F3227601B69FF820008CE70 /* Main.storyboard in Resources */,
 				9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */,
 				9F3725C11B7C9CB6000E9E13 /* HistoryCell.xib in Resources */,
+				9F32EB191B8D8C4600D0B75E /* selectTimeCell.xib in Resources */,
 				9F5ECFFB1B6AF4E00062BAAF /* count.png in Resources */,
 				9F5ECFF21B6AF4D10062BAAF /* book@3x.png in Resources */,
 				9F3227621B69FF820008CE70 /* Images.xcassets in Resources */,
@@ -621,6 +648,7 @@
 			files = (
 				9F32275D1B69FF820008CE70 /* ViewController.m in Sources */,
 				9F32277F1B6A046B0008CE70 /* SVProgressHUD.m in Sources */,
+				9F32EB1C1B8D8CFA00D0B75E /* SelectTimeCell.m in Sources */,
 				9F3227921B6A0F310008CE70 /* CountDetailController.m in Sources */,
 				9F3227A01B6A18570008CE70 /* PeopleSelectController.m in Sources */,
 				9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */,
@@ -636,6 +664,7 @@
 				9F3725B31B7C6C56000E9E13 /* MeetingBookDetailController.m in Sources */,
 				9F3725B91B7C7B43000E9E13 /* MeetingCell.m in Sources */,
 				9F3B47961B7D8169008A1407 /* MyTimeView.m in Sources */,
+				9F32EB151B8D575B00D0B75E /* BookDetailController.m in Sources */,
 				9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */,
 				9F3B47951B7D8169008A1407 /* MyCell.m in Sources */,
 				9F3725C41B7C9DDE000E9E13 /* HistoryCell.m in Sources */,
@@ -643,6 +672,7 @@
 				9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */,
 				9F4F243D1B79E73E00D7CBD5 /* PDFViewController.m in Sources */,
 				9F5ECFFF1B6B00820062BAAF /* ResturantCell.m in Sources */,
+				9F32EB1F1B8D91CD00D0B75E /* LIstViewController.m in Sources */,
 				9F37259D1B7C2744000E9E13 /* PersonDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

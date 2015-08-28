@@ -10,6 +10,7 @@
 #import "MeetingCell.h"
 #import "SVProgressHUD.h"
 #import "RequestObject.h"
+#import "BookDetailController.h"
 
 @interface MeetingBookDetailController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 {
@@ -164,6 +165,15 @@
     //也可以通过设置button的tag值来确定是哪一行
 //    MeetingCell *cell = (MeetingCell *)btn.superview.superview;
 //    NSIndexPath *path = [_table indexPathForCell:cell];
+    
+    BookDetailController *detail = [[BookDetailController alloc] init];
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
+    back.title = @"返回";
+    self.navigationItem.backBarButtonItem = back;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+    //预定的代码
+    /*
     NSDictionary *dic = _list[btn.tag];
     
     //http://115.236.2.245:38019/DataDc.ashx?t=IntMBooking&results=2004$01$2015-08-17$0$0
@@ -179,6 +189,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择是否需要投影仪" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"大投影仪", @"小投影仪",@"不需要，只预定",nil];
     alert.tag = 1001;
     [alert show];
+     */
 }
 
 #pragma mark - BookRoomAction
@@ -209,7 +220,7 @@
                 [self requestHttp];
                 //
             }else{
-                [SVProgressHUD dismissWithError:@"预定失败"];
+                [SVProgressHUD dismissWithError:[dic objectForKey:@"result"]];
             }
         }
     });
@@ -244,7 +255,7 @@
                 [self requestHttp];
                 //
             }else{
-                [SVProgressHUD dismissWithError:@"取消失败"];
+                [SVProgressHUD dismissWithError:[dic objectForKey:@"result"]];
             }
         }
     });
@@ -254,20 +265,6 @@
 {
     if (alertView.tag == 1001) {
         NSString *machine = nil;
-//        if (buttonIndex == 0) {
-//            [alertView dismissWithClickedButtonIndex:0 animated:YES];
-//            return;
-//        }else
-//            if (buttonIndex == 1){
-//                //大投影
-//                machine = @"1";//表示大投影仪
-//            }else if (buttonIndex == 2){
-//                //小投影
-//                machine = @"2";//表示小投影仪
-//            }else{
-//                //不需要
-//                machine = @"0";//代表不用投影仪
-//            }
         switch (buttonIndex) {
             case 0:
                 [alertView dismissWithClickedButtonIndex:0 animated:YES];
