@@ -77,7 +77,6 @@
         _list = [RequestObject requestData];
         if (_list.count != 0) {
             [_table reloadData];
-            NSLog(@"请求的数据时:%@",_list);
         }else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请求的网络数据为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];

@@ -12,12 +12,13 @@
 {
     UITableView *_tableView;
     //NSArray *_sourceData;//数据源
+
 }
 
 @end
 
 @implementation LIstViewController
-@synthesize sourceData = _sourceData;
+//@synthesize sourceData = _sourceData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +45,12 @@
         case 3:
         {
             //已被预约时段
-           // _sourceData = @[@"13:30",@"14:00",@"14:30",@"15:00",@"15:30",@"16:00",@"16:30",@"17:00"];
+            self.sourceData = @[@"13:30",@"14:00",@"14:30",@"15:00",@"15:30",@"16:00",@"16:30",@"17:00"];
+        }
+            break;
+        case 4:
+        {
+           self.sourceData = @[@"不需要",@"大投影仪",@"小投影仪"]; 
         }
             break;
         default:
@@ -59,7 +65,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.sourceData.count;
+    @try {
+         return self.sourceData.count;
+    }
+    @catch (NSException *exception) {
+        NSLog(@"错误：%@",exception);
+    }
+   
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,15 +81,22 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:15];
     cell.textLabel.text = self.sourceData[indexPath.row];
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *select_str = self.sourceData[indexPath.row];
+    self.selectBlock(select_str);
+    
+    //回到上一级
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

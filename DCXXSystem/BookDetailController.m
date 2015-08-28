@@ -10,8 +10,16 @@
 #import "SelectTimeCell.h"
 #import "LIstViewController.h"
 
+#define ButtonHeight 30
+#define ButtonWidth 280
+
 @interface BookDetailController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
+    
+    
+    NSString *_startTime; //开始时间
+    NSString *_endTime;//结束时间
+    NSString *_machineType; //投影仪类别
 }
 
 @end
@@ -25,22 +33,37 @@
     self.title = @"预定选项";
     [self initBar];
     
-    _tableView = [[UITableView alloc] initWithFrame:(CGRect){0,0,kScreen_Width,(kScreen_height/3)*2} style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:(CGRect){0,0,kScreen_Width,(kScreen_height/5)*3} style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
+    
+    UIButton *comfirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    comfirmBtn.frame = (CGRect){(kScreen_Width - ButtonWidth)/2,_tableView.frame.size.height + 10,ButtonWidth,ButtonHeight};
+    comfirmBtn.titleLabel.textColor = [UIColor blackColor];
+    [comfirmBtn setTitle:@"确 定" forState:UIControlStateNormal];
+    comfirmBtn.backgroundColor = [UIColor colorWithRed:25/255.0 green:110/255.0 blue:241/255.0 alpha:1.0];
+    comfirmBtn.layer.cornerRadius = 5.0f;
+    [comfirmBtn addTarget:self action:@selector(comfirmMeetingRoomAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:comfirmBtn];
 }
 
 - (void)initBar
 {
     UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
-    back = @"返回";
+    back.title = @"返回";
     self.navigationItem.backBarButtonItem= back;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 
+- (void)comfirmMeetingRoomAction:(id)sender
+{
+    
 }
 
 
@@ -110,24 +133,51 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
+    switch (indexPath.section) {
         case 0:
         {
+            
+            SelectTimeCell *cell = (SelectTimeCell *)[tableView cellForRowAtIndexPath:indexPath];
             LIstViewController *list = [[LIstViewController alloc] init];
             list.index = 1;
+            list.title = cell.ttitleLabel.text;
+            [list setSelectBlock:^(NSString *selectedStr) {
+                if (indexPath.row == 0) {
+                    //开始时间
+                    _startTime = selectedStr;
+                }else{
+                    //结束时间
+                    _endTime = selectedStr;
+                }
+                cell.valueLabel.text = selectedStr;
+            }];
             [self.navigationController pushViewController:list animated:YES];
+
         }
             break;
         case 1:
         {
+            //已预约的时间段
+            UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
             LIstViewController *list = [[LIstViewController alloc] init];
-            list.index = 1;
+            list.index = 3;
+            list.title = cell.textLabel.text;
             [self.navigationController pushViewController:list animated:YES];
         }
             break;
         case 2:
         {
-            
+            //是否需要投影仪
+            SelectTimeCell *cell = (SelectTimeCell *)[tableView cellForRowAtIndexPath:indexPath];
+            LIstViewController *list = [[LIstViewController alloc] init];
+            list.index = 4;
+            list.title = cell.ttitleLabel.text;
+            [list setSelectBlock:^(NSString *selectedStr) {
+                //结束时间
+                cell.valueLabel.text = selectedStr;
+                _machineType = selectedStr;
+            }];
+            [self.navigationController pushViewController:list animated:YES];
         }
             break;
         default:

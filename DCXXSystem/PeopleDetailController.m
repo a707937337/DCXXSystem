@@ -93,7 +93,6 @@
 //同步到本地
 - (void)confirmAction:(UIButton *)btn
 {
-    NSLog(@"%@",(NSString *)[_selectUser objectForKey:@"Sname"]);
     if ([(NSString *)[_selectUser objectForKey:@"Sname"] length] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择一个人" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
