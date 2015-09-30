@@ -67,7 +67,17 @@
 {
     // Required
     [APService handleRemoteNotification:userInfo];
-    NSLog(@"接收到新消息");
+    
+}
+
+//是否支持横屏
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    
+    if(_isFull){
+        return UIInterfaceOrientationMaskAll;
+
+    }
+    return UIInterfaceOrientationMaskPortrait;
     
 }
 
@@ -80,16 +90,6 @@
     // IOS 7 Support Required
     [APService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
-//    struct utsname systemInfo;
-//    uname(&systemInfo);
-//    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-//    if ([deviceString isEqualToString:@"iPhone3,1"]) {
-//        NSLog(@"当前的手机是iPhone 4");
-//    }else if([deviceString isEqualToString:@"iPhone4,1"])
-//    {
-//        NSLog(@"当前手机是 iPhone 4S");
-//    }
-//    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sound" ofType:@"caf"];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])

@@ -21,11 +21,18 @@
 @property (weak, nonatomic) IBOutlet UIButton *count_btn;
 @property (weak, nonatomic) IBOutlet UILabel *userLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *fontLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *fontLabel;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
+//人员选择
 - (IBAction)selectPeopleAction:(id)sender;
+//订餐
 - (IBAction)bookAction:(id)sender;
+//预定会议室
 - (IBAction)bookMeetingRoomAction:(id)sender;
+//视频播放
+- (IBAction)playVideoAction:(id)sender;
+//投票
+- (IBAction)voteAction:(id)sender;
 
 
 @end
@@ -41,8 +48,7 @@
         self.userLabel.text = @"未知用户";
     }else{
         self.userLabel.text = name;
-    }
-    
+    }    
 }
 
 //获取保存在本地的信息
@@ -78,7 +84,7 @@
    // [self insertColorGradient];
     
     //暂时隐藏
-    self.fontLabel.textColor = BG_COLOR;
+  //  self.fontLabel.textColor = BG_COLOR;
     
     UIButton *update_btn = [UIButton buttonWithType:UIButtonTypeCustom];
     update_btn.frame = (CGRect){0,0,40,20};
@@ -243,6 +249,26 @@
         return;
     }
     [self performSegueWithIdentifier:@"meetingRoom" sender:nil];
+}
+
+//视频播放
+- (IBAction)playVideoAction:(id)sender
+{
+    [self performSegueWithIdentifier:@"video" sender:nil];
+}
+
+//投票
+- (IBAction)voteAction:(id)sender
+{
+    NSDictionary *user = [self getUserName];
+    NSString *name = (NSString *)[user objectForKey:@"Sname"];
+    if ([name length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先选择预定人员" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        alert.tag = 1002;
+        [alert show];
+        return;
+    }
+    [self performSegueWithIdentifier:@"vote" sender:nil];
 }
 
 #pragma mark - UIAlertViewDelegate

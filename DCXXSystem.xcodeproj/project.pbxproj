@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2F6C471B9C3E500068E327 /* VideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2F6C461B9C3E500068E327 /* VideoPlayController.m */; };
 		9F3227571B69FF820008CE70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227561B69FF820008CE70 /* main.m */; };
 		9F32275A1B69FF820008CE70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3227591B69FF820008CE70 /* AppDelegate.m */; };
 		9F32275D1B69FF820008CE70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F32275C1B69FF820008CE70 /* ViewController.m */; };
@@ -44,6 +45,9 @@
 		9F3B47941B7D8169008A1407 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B478F1B7D8169008A1407 /* HeaderView.m */; };
 		9F3B47951B7D8169008A1407 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B47911B7D8169008A1407 /* MyCell.m */; };
 		9F3B47961B7D8169008A1407 /* MyTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B47931B7D8169008A1407 /* MyTimeView.m */; };
+		9F428D181B9D2A7B005097C3 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F428D171B9D2A7B005097C3 /* video.png */; };
+		9F428D1A1B9D2A85005097C3 /* video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F428D191B9D2A85005097C3 /* video@2x.png */; };
+		9F428D1C1B9D2A8E005097C3 /* video@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F428D1B1B9D2A8E005097C3 /* video@3x.png */; };
 		9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */; };
 		9F4F24311B79D1C100D7CBD5 /* PlanReadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24301B79D1C100D7CBD5 /* PlanReadController.m */; };
 		9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24331B79D54700D7CBD5 /* RequestObject.m */; };
@@ -67,6 +71,12 @@
 		9F5ED0011B6B06300062BAAF /* user@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5ED0001B6B06300062BAAF /* user@3x.png */; };
 		9F5ED0031B6B06380062BAAF /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5ED0021B6B06380062BAAF /* user@2x.png */; };
 		9F5ED0051B6B063D0062BAAF /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5ED0041B6B063D0062BAAF /* user.png */; };
+		9FD16D011BBB74050004F7FA /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16D001BBB74050004F7FA /* VoteViewController.m */; };
+		9FD16D041BBB74F30004F7FA /* CallVoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16D031BBB74F30004F7FA /* CallVoteController.m */; };
+		9FD16D071BBB75170004F7FA /* VoteCountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16D061BBB75170004F7FA /* VoteCountController.m */; };
+		9FD16D091BBB87A80004F7FA /* vote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD16D081BBB87A80004F7FA /* vote@3x.png */; };
+		9FD16D0B1BBB87AE0004F7FA /* vote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD16D0A1BBB87AE0004F7FA /* vote@2x.png */; };
+		9FD16D0D1BBB87B20004F7FA /* vote.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD16D0C1BBB87B20004F7FA /* vote.png */; };
 		B119DAEB4F5A5A08DD47FDC4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0F564F652CD7C165D0740E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +93,8 @@
 /* Begin PBXFileReference section */
 		391DBE679C81336402A81AB1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7332489AB196F8623B871A45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9F2F6C451B9C3E500068E327 /* VideoPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayController.h; sourceTree = "<group>"; };
+		9F2F6C461B9C3E500068E327 /* VideoPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayController.m; sourceTree = "<group>"; };
 		9F3227511B69FF820008CE70 /* DCXXSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCXXSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3227551B69FF820008CE70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F3227561B69FF820008CE70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,6 +157,9 @@
 		9F3B47911B7D8169008A1407 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		9F3B47921B7D8169008A1407 /* MyTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTimeView.h; sourceTree = "<group>"; };
 		9F3B47931B7D8169008A1407 /* MyTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTimeView.m; sourceTree = "<group>"; };
+		9F428D171B9D2A7B005097C3 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
+		9F428D191B9D2A85005097C3 /* video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@2x.png"; sourceTree = "<group>"; };
+		9F428D1B1B9D2A8E005097C3 /* video@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@3x.png"; sourceTree = "<group>"; };
 		9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRoomController.h; sourceTree = "<group>"; };
 		9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRoomController.m; sourceTree = "<group>"; };
 		9F4F242F1B79D1C100D7CBD5 /* PlanReadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanReadController.h; sourceTree = "<group>"; };
@@ -177,6 +192,15 @@
 		9F5ED0001B6B06300062BAAF /* user@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@3x.png"; sourceTree = "<group>"; };
 		9F5ED0021B6B06380062BAAF /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
 		9F5ED0041B6B063D0062BAAF /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		9FD16CFF1BBB74050004F7FA /* VoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteViewController.h; sourceTree = "<group>"; };
+		9FD16D001BBB74050004F7FA /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
+		9FD16D021BBB74F30004F7FA /* CallVoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallVoteController.h; sourceTree = "<group>"; };
+		9FD16D031BBB74F30004F7FA /* CallVoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallVoteController.m; sourceTree = "<group>"; };
+		9FD16D051BBB75170004F7FA /* VoteCountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteCountController.h; sourceTree = "<group>"; };
+		9FD16D061BBB75170004F7FA /* VoteCountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteCountController.m; sourceTree = "<group>"; };
+		9FD16D081BBB87A80004F7FA /* vote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vote@3x.png"; sourceTree = "<group>"; };
+		9FD16D0A1BBB87AE0004F7FA /* vote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vote@2x.png"; sourceTree = "<group>"; };
+		9FD16D0C1BBB87B20004F7FA /* vote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vote.png; sourceTree = "<group>"; };
 		DF0F564F652CD7C165D0740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -217,6 +241,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F2F6C441B9C3E390068E327 /* VideoPlay */ = {
+			isa = PBXGroup;
+			children = (
+				9F2F6C451B9C3E500068E327 /* VideoPlayController.h */,
+				9F2F6C461B9C3E500068E327 /* VideoPlayController.m */,
+			);
+			name = VideoPlay;
+			sourceTree = "<group>";
+		};
 		9F3227481B69FF820008CE70 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +273,8 @@
 		9F3227531B69FF820008CE70 /* DCXXSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9FD16CFE1BBB73D20004F7FA /* Vote */,
+				9F2F6C441B9C3E390068E327 /* VideoPlay */,
 				9F3B478D1B7D814A008A1407 /* ScrollTable */,
 				9F3725BD1B7C9B10000E9E13 /* CustomView */,
 				9F4F242E1B79D1AF00D7CBD5 /* PlanRead */,
@@ -330,6 +365,8 @@
 		9F3227931B6A13620008CE70 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				9F428D171B9D2A7B005097C3 /* video.png */,
+				9FD16D0C1BBB87B20004F7FA /* vote.png */,
 				9F3725A61B7C4536000E9E13 /* rule.png */,
 				9F3725AA1B7C650F000E9E13 /* meeting.png */,
 				9F5ECFF81B6AF4E00062BAAF /* book.png */,
@@ -342,7 +379,9 @@
 		9F3227941B6A13680008CE70 /* image@2x */ = {
 			isa = PBXGroup;
 			children = (
+				9FD16D0A1BBB87AE0004F7FA /* vote@2x.png */,
 				9F3725AC1B7C6525000E9E13 /* meeting@2x.png */,
+				9F428D191B9D2A85005097C3 /* video@2x.png */,
 				9F3725A21B7C452D000E9E13 /* rule@2x.png */,
 				9F5ECFF41B6AF4D80062BAAF /* book@2x.png */,
 				9F5ED0021B6B06380062BAAF /* user@2x.png */,
@@ -354,6 +393,8 @@
 		9F3227951B6A136F0008CE70 /* image@3x */ = {
 			isa = PBXGroup;
 			children = (
+				9FD16D081BBB87A80004F7FA /* vote@3x.png */,
+				9F428D1B1B9D2A8E005097C3 /* video@3x.png */,
 				9F3725AE1B7C652A000E9E13 /* meeting@3x.png */,
 				9F3725A01B7C4523000E9E13 /* rule@3x.png */,
 				9F5ED0001B6B06300062BAAF /* user@3x.png */,
@@ -474,6 +515,19 @@
 			name = customCell;
 			sourceTree = "<group>";
 		};
+		9FD16CFE1BBB73D20004F7FA /* Vote */ = {
+			isa = PBXGroup;
+			children = (
+				9FD16CFF1BBB74050004F7FA /* VoteViewController.h */,
+				9FD16D001BBB74050004F7FA /* VoteViewController.m */,
+				9FD16D021BBB74F30004F7FA /* CallVoteController.h */,
+				9FD16D031BBB74F30004F7FA /* CallVoteController.m */,
+				9FD16D051BBB75170004F7FA /* VoteCountController.h */,
+				9FD16D061BBB75170004F7FA /* VoteCountController.m */,
+			);
+			name = Vote;
+			sourceTree = "<group>";
+		};
 		BD6F4D4482EA4B8FEB711997 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +630,7 @@
 				9F5ECFF61B6AF4D80062BAAF /* book@2x.png in Resources */,
 				9F3725AB1B7C650F000E9E13 /* meeting.png in Resources */,
 				9F3725A41B7C452D000E9E13 /* rule@2x.png in Resources */,
+				9F428D1C1B9D2A8E005097C3 /* video@3x.png in Resources */,
 				9F3725AD1B7C6525000E9E13 /* meeting@2x.png in Resources */,
 				9F3227601B69FF820008CE70 /* Main.storyboard in Resources */,
 				9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */,
@@ -583,6 +638,8 @@
 				9F32EB191B8D8C4600D0B75E /* selectTimeCell.xib in Resources */,
 				9F5ECFFB1B6AF4E00062BAAF /* count.png in Resources */,
 				9F5ECFF21B6AF4D10062BAAF /* book@3x.png in Resources */,
+				9FD16D0B1BBB87AE0004F7FA /* vote@2x.png in Resources */,
+				9F428D181B9D2A7B005097C3 /* video.png in Resources */,
 				9F3227621B69FF820008CE70 /* Images.xcassets in Resources */,
 				9F3725A81B7C4536000E9E13 /* rule.png in Resources */,
 				9F32278F1B6A08510008CE70 /* OrderDetailController.xib in Resources */,
@@ -592,10 +649,13 @@
 				9F32277E1B6A046B0008CE70 /* SVProgressHUD.bundle in Resources */,
 				9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */,
 				9F3725B61B7C76E5000E9E13 /* MeetingCell.xib in Resources */,
+				9FD16D0D1BBB87B20004F7FA /* vote.png in Resources */,
 				9F5ED0031B6B06380062BAAF /* user@2x.png in Resources */,
+				9F428D1A1B9D2A85005097C3 /* video@2x.png in Resources */,
 				9F5ED0011B6B06300062BAAF /* user@3x.png in Resources */,
 				9F3725AF1B7C652A000E9E13 /* meeting@3x.png in Resources */,
 				9F5ECFF31B6AF4D10062BAAF /* count@3x.png in Resources */,
+				9FD16D091BBB87A80004F7FA /* vote@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +712,7 @@
 				9F3227921B6A0F310008CE70 /* CountDetailController.m in Sources */,
 				9F3227A01B6A18570008CE70 /* PeopleSelectController.m in Sources */,
 				9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */,
+				9FD16D011BBB74050004F7FA /* VoteViewController.m in Sources */,
 				9F3725BC1B7C99D7000E9E13 /* HistoryViewController.m in Sources */,
 				9F3227871B6A052B0008CE70 /* NumCountController.m in Sources */,
 				9F4F24371B79D99300D7CBD5 /* PlanListController.m in Sources */,
@@ -663,13 +724,16 @@
 				9F4F243A1B79DCF900D7CBD5 /* FIleDownLoad.m in Sources */,
 				9F3725B31B7C6C56000E9E13 /* MeetingBookDetailController.m in Sources */,
 				9F3725B91B7C7B43000E9E13 /* MeetingCell.m in Sources */,
+				9FD16D041BBB74F30004F7FA /* CallVoteController.m in Sources */,
 				9F3B47961B7D8169008A1407 /* MyTimeView.m in Sources */,
 				9F32EB151B8D575B00D0B75E /* BookDetailController.m in Sources */,
+				9F2F6C471B9C3E500068E327 /* VideoPlayController.m in Sources */,
 				9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */,
 				9F3B47951B7D8169008A1407 /* MyCell.m in Sources */,
 				9F3725C41B7C9DDE000E9E13 /* HistoryCell.m in Sources */,
 				9F3227821B6A04C40008CE70 /* RestaurantViewController.m in Sources */,
 				9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */,
+				9FD16D071BBB75170004F7FA /* VoteCountController.m in Sources */,
 				9F4F243D1B79E73E00D7CBD5 /* PDFViewController.m in Sources */,
 				9F5ECFFF1B6B00820062BAAF /* ResturantCell.m in Sources */,
 				9F32EB1F1B8D91CD00D0B75E /* LIstViewController.m in Sources */,
@@ -793,8 +857,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: roger ace (W6A2225E87)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roger ace (W6A2225E87)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DCXXSystem/PrefixHeader.pch";
 				INFOPLIST_FILE = DCXXSystem/Info.plist;
@@ -805,7 +869,7 @@
 					"$(PROJECT_DIR)/DCXXSystem",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9e7fd74d-9066-4b98-bc4a-8db37927069c";
+				PROVISIONING_PROFILE = "04be446c-4df9-42f7-becc-29f7a14ac12c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -816,8 +880,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Dingchuan Information Technology Co., Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: roger ace (W6A2225E87)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roger ace (W6A2225E87)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DCXXSystem/PrefixHeader.pch";
 				INFOPLIST_FILE = DCXXSystem/Info.plist;
@@ -828,7 +892,7 @@
 					"$(PROJECT_DIR)/DCXXSystem",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9e7fd74d-9066-4b98-bc4a-8db37927069c";
+				PROVISIONING_PROFILE = "04be446c-4df9-42f7-becc-29f7a14ac12c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

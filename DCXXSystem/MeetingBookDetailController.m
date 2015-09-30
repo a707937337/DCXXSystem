@@ -165,14 +165,17 @@
 //    MeetingCell *cell = (MeetingCell *)btn.superview.superview;
 //    NSIndexPath *path = [_table indexPathForCell:cell];
     
+    /*
+     //新版本 预定代码
     BookDetailController *detail = [[BookDetailController alloc] init];
     UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
     back.title = @"返回";
     self.navigationItem.backBarButtonItem = back;
     [self.navigationController pushViewController:detail animated:YES];
+     */
     
     //预定的代码
-    /*
+    
     NSDictionary *dic = _list[btn.tag];
     
     //http://115.236.2.245:38019/DataDc.ashx?t=IntMBooking&results=2004$01$2015-08-17$0$0
@@ -188,7 +191,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择是否需要投影仪" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"大投影仪", @"小投影仪",@"不需要，只预定",nil];
     alert.tag = 1001;
     [alert show];
-     */
+     
 }
 
 #pragma mark - BookRoomAction
