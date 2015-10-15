@@ -7,6 +7,8 @@
 //
 
 #import "CallVoteController.h"
+#import "RequestObject.h"
+#import "SVProgressHUD.h"
 
 @interface CallVoteController ()
 
@@ -48,6 +50,35 @@
         [alert show];
         return;
     }
+    
+    [self callRequestAction];
+}
+
+- (void)callRequestAction
+{
+    [SVProgressHUD showWithStatus:@"上传中..."];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if ([RequestObject fetchWithType:@"IntStartVote" withResults:self.voteContent.text]) {
+            [self updateUI];
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismissWithError:@"上传失败"];
+            });
+        }
+    });
+}
+
+- (void)updateUI
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSArray *list = [RequestObject requestData];
+        if (list.count != 0) {
+            [SVProgressHUD dismissWithSuccess:@"上传成功"];
+           // [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [SVProgressHUD dismissWithError:@"上传失败"];
+        }
+    });
 }
 
 //取消键盘

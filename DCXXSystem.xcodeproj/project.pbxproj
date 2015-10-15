@@ -48,6 +48,16 @@
 		9F428D181B9D2A7B005097C3 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F428D171B9D2A7B005097C3 /* video.png */; };
 		9F428D1A1B9D2A85005097C3 /* video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F428D191B9D2A85005097C3 /* video@2x.png */; };
 		9F428D1C1B9D2A8E005097C3 /* video@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F428D1B1B9D2A8E005097C3 /* video@3x.png */; };
+		9F434D1E1BCF3BA500A6A60F /* VoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D1D1BCF3BA500A6A60F /* VoteCell.xib */; };
+		9F434D211BCF3E5900A6A60F /* VoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F434D201BCF3E5900A6A60F /* VoteCell.m */; };
+		9F434D231BCF7BD500A6A60F /* VoteCount.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D221BCF7BD500A6A60F /* VoteCount.xib */; };
+		9F434D261BCF7E0500A6A60F /* VoteCountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F434D251BCF7E0500A6A60F /* VoteCountCell.m */; };
+		9F434D281BCF87E400A6A60F /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D271BCF87E400A6A60F /* close@3x.png */; };
+		9F434D2A1BCF87E900A6A60F /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D291BCF87E900A6A60F /* close@2x.png */; };
+		9F434D2C1BCF87EF00A6A60F /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D2B1BCF87EF00A6A60F /* close.png */; };
+		9F434D2E1BCF8BB200A6A60F /* close_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D2D1BCF8BB200A6A60F /* close_selected@2x.png */; };
+		9F434D301BCF8BB600A6A60F /* close_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D2F1BCF8BB600A6A60F /* close_selected@3x.png */; };
+		9F434D321BCF8BB900A6A60F /* close_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F434D311BCF8BB900A6A60F /* close_selected.png */; };
 		9F4F242D1B79D18C00D7CBD5 /* BookRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */; };
 		9F4F24311B79D1C100D7CBD5 /* PlanReadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24301B79D1C100D7CBD5 /* PlanReadController.m */; };
 		9F4F24341B79D54700D7CBD5 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F24331B79D54700D7CBD5 /* RequestObject.m */; };
@@ -160,6 +170,18 @@
 		9F428D171B9D2A7B005097C3 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		9F428D191B9D2A85005097C3 /* video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@2x.png"; sourceTree = "<group>"; };
 		9F428D1B1B9D2A8E005097C3 /* video@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@3x.png"; sourceTree = "<group>"; };
+		9F434D1D1BCF3BA500A6A60F /* VoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteCell.xib; sourceTree = "<group>"; };
+		9F434D1F1BCF3E5900A6A60F /* VoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteCell.h; sourceTree = "<group>"; };
+		9F434D201BCF3E5900A6A60F /* VoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteCell.m; sourceTree = "<group>"; };
+		9F434D221BCF7BD500A6A60F /* VoteCount.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteCount.xib; sourceTree = "<group>"; };
+		9F434D241BCF7E0500A6A60F /* VoteCountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteCountCell.h; sourceTree = "<group>"; };
+		9F434D251BCF7E0500A6A60F /* VoteCountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteCountCell.m; sourceTree = "<group>"; };
+		9F434D271BCF87E400A6A60F /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
+		9F434D291BCF87E900A6A60F /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		9F434D2B1BCF87EF00A6A60F /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		9F434D2D1BCF8BB200A6A60F /* close_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_selected@2x.png"; sourceTree = "<group>"; };
+		9F434D2F1BCF8BB600A6A60F /* close_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_selected@3x.png"; sourceTree = "<group>"; };
+		9F434D311BCF8BB900A6A60F /* close_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_selected.png; sourceTree = "<group>"; };
 		9F4F242B1B79D18C00D7CBD5 /* BookRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRoomController.h; sourceTree = "<group>"; };
 		9F4F242C1B79D18C00D7CBD5 /* BookRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRoomController.m; sourceTree = "<group>"; };
 		9F4F242F1B79D1C100D7CBD5 /* PlanReadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanReadController.h; sourceTree = "<group>"; };
@@ -365,8 +387,10 @@
 		9F3227931B6A13620008CE70 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				9F434D2B1BCF87EF00A6A60F /* close.png */,
 				9F428D171B9D2A7B005097C3 /* video.png */,
 				9FD16D0C1BBB87B20004F7FA /* vote.png */,
+				9F434D311BCF8BB900A6A60F /* close_selected.png */,
 				9F3725A61B7C4536000E9E13 /* rule.png */,
 				9F3725AA1B7C650F000E9E13 /* meeting.png */,
 				9F5ECFF81B6AF4E00062BAAF /* book.png */,
@@ -379,6 +403,8 @@
 		9F3227941B6A13680008CE70 /* image@2x */ = {
 			isa = PBXGroup;
 			children = (
+				9F434D291BCF87E900A6A60F /* close@2x.png */,
+				9F434D2D1BCF8BB200A6A60F /* close_selected@2x.png */,
 				9FD16D0A1BBB87AE0004F7FA /* vote@2x.png */,
 				9F3725AC1B7C6525000E9E13 /* meeting@2x.png */,
 				9F428D191B9D2A85005097C3 /* video@2x.png */,
@@ -394,6 +420,8 @@
 			isa = PBXGroup;
 			children = (
 				9FD16D081BBB87A80004F7FA /* vote@3x.png */,
+				9F434D2F1BCF8BB600A6A60F /* close_selected@3x.png */,
+				9F434D271BCF87E400A6A60F /* close@3x.png */,
 				9F428D1B1B9D2A8E005097C3 /* video@3x.png */,
 				9F3725AE1B7C652A000E9E13 /* meeting@3x.png */,
 				9F3725A01B7C4523000E9E13 /* rule@3x.png */,
@@ -458,6 +486,19 @@
 			name = ScrollTable;
 			sourceTree = "<group>";
 		};
+		9F434D1C1BCF3A4E00A6A60F /* customCell */ = {
+			isa = PBXGroup;
+			children = (
+				9F434D1D1BCF3BA500A6A60F /* VoteCell.xib */,
+				9F434D1F1BCF3E5900A6A60F /* VoteCell.h */,
+				9F434D201BCF3E5900A6A60F /* VoteCell.m */,
+				9F434D221BCF7BD500A6A60F /* VoteCount.xib */,
+				9F434D241BCF7E0500A6A60F /* VoteCountCell.h */,
+				9F434D251BCF7E0500A6A60F /* VoteCountCell.m */,
+			);
+			name = customCell;
+			sourceTree = "<group>";
+		};
 		9F4F242A1B79D16D00D7CBD5 /* MeetRoomBook */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +559,7 @@
 		9FD16CFE1BBB73D20004F7FA /* Vote */ = {
 			isa = PBXGroup;
 			children = (
+				9F434D1C1BCF3A4E00A6A60F /* customCell */,
 				9FD16CFF1BBB74050004F7FA /* VoteViewController.h */,
 				9FD16D001BBB74050004F7FA /* VoteViewController.m */,
 				9FD16D021BBB74F30004F7FA /* CallVoteController.h */,
@@ -588,6 +630,7 @@
 				TargetAttributes = {
 					9F3227501B69FF820008CE70 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LNMMM7J8HZ;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -626,6 +669,7 @@
 			files = (
 				9F51A38F1B71EC5A00561A61 /* PushConfig.plist in Resources */,
 				9F5ECFF71B6AF4D80062BAAF /* count@2x.png in Resources */,
+				9F434D301BCF8BB600A6A60F /* close_selected@3x.png in Resources */,
 				9F3725A11B7C4523000E9E13 /* rule@3x.png in Resources */,
 				9F5ECFF61B6AF4D80062BAAF /* book@2x.png in Resources */,
 				9F3725AB1B7C650F000E9E13 /* meeting.png in Resources */,
@@ -636,9 +680,11 @@
 				9F3227A61B6A1FF50008CE70 /* PeopleDetailController.xib in Resources */,
 				9F3725C11B7C9CB6000E9E13 /* HistoryCell.xib in Resources */,
 				9F32EB191B8D8C4600D0B75E /* selectTimeCell.xib in Resources */,
+				9F434D2E1BCF8BB200A6A60F /* close_selected@2x.png in Resources */,
 				9F5ECFFB1B6AF4E00062BAAF /* count.png in Resources */,
 				9F5ECFF21B6AF4D10062BAAF /* book@3x.png in Resources */,
 				9FD16D0B1BBB87AE0004F7FA /* vote@2x.png in Resources */,
+				9F434D1E1BCF3BA500A6A60F /* VoteCell.xib in Resources */,
 				9F428D181B9D2A7B005097C3 /* video.png in Resources */,
 				9F3227621B69FF820008CE70 /* Images.xcassets in Resources */,
 				9F3725A81B7C4536000E9E13 /* rule.png in Resources */,
@@ -648,10 +694,15 @@
 				9F51A3921B7203BE00561A61 /* sound.caf in Resources */,
 				9F32277E1B6A046B0008CE70 /* SVProgressHUD.bundle in Resources */,
 				9F3227A11B6A18570008CE70 /* PeopleSelectController.xib in Resources */,
+				9F434D2C1BCF87EF00A6A60F /* close.png in Resources */,
 				9F3725B61B7C76E5000E9E13 /* MeetingCell.xib in Resources */,
 				9FD16D0D1BBB87B20004F7FA /* vote.png in Resources */,
+				9F434D2A1BCF87E900A6A60F /* close@2x.png in Resources */,
+				9F434D231BCF7BD500A6A60F /* VoteCount.xib in Resources */,
 				9F5ED0031B6B06380062BAAF /* user@2x.png in Resources */,
 				9F428D1A1B9D2A85005097C3 /* video@2x.png in Resources */,
+				9F434D281BCF87E400A6A60F /* close@3x.png in Resources */,
+				9F434D321BCF8BB900A6A60F /* close_selected.png in Resources */,
 				9F5ED0011B6B06300062BAAF /* user@3x.png in Resources */,
 				9F3725AF1B7C652A000E9E13 /* meeting@3x.png in Resources */,
 				9F5ECFF31B6AF4D10062BAAF /* count@3x.png in Resources */,
@@ -715,6 +766,7 @@
 				9FD16D011BBB74050004F7FA /* VoteViewController.m in Sources */,
 				9F3725BC1B7C99D7000E9E13 /* HistoryViewController.m in Sources */,
 				9F3227871B6A052B0008CE70 /* NumCountController.m in Sources */,
+				9F434D211BCF3E5900A6A60F /* VoteCell.m in Sources */,
 				9F4F24371B79D99300D7CBD5 /* PlanListController.m in Sources */,
 				9F32275A1B69FF820008CE70 /* AppDelegate.m in Sources */,
 				9F3227571B69FF820008CE70 /* main.m in Sources */,
@@ -738,6 +790,7 @@
 				9F5ECFFF1B6B00820062BAAF /* ResturantCell.m in Sources */,
 				9F32EB1F1B8D91CD00D0B75E /* LIstViewController.m in Sources */,
 				9F37259D1B7C2744000E9E13 /* PersonDetailController.m in Sources */,
+				9F434D261BCF7E0500A6A60F /* VoteCountCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,7 +922,7 @@
 					"$(PROJECT_DIR)/DCXXSystem",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04be446c-4df9-42f7-becc-29f7a14ac12c";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -892,7 +945,7 @@
 					"$(PROJECT_DIR)/DCXXSystem",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04be446c-4df9-42f7-becc-29f7a14ac12c";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

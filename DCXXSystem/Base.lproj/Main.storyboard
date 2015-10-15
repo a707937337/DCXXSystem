@@ -193,60 +193,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23O-KY-WFl">
-                                <rect key="frame" x="16" y="271" width="120" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="2Jv-js-TYd"/>
-                                    <constraint firstAttribute="height" constant="40" id="Ay0-UC-0hs"/>
-                                </constraints>
-                                <state key="normal" title="YES">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="voteAction:" destination="M11-t8-uvL" eventType="touchUpInside" id="fve-hr-F0P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCr-uQ-03A">
-                                <rect key="frame" x="184" y="271" width="120" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5Bj-Ue-iGa"/>
-                                    <constraint firstAttribute="width" constant="120" id="6Ag-AR-QI4"/>
-                                </constraints>
-                                <state key="normal" title="NO">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="voteAction:" destination="M11-t8-uvL" eventType="touchUpInside" id="cvE-oT-2sA"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="nihao " translatesAutoresizingMaskIntoConstraints="NO" id="N4V-Tz-D3K">
-                                <rect key="frame" x="0.0" y="44" width="320" height="181"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="181" id="GFY-bw-Q5g"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0DO-sy-7ZJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="N4V-Tz-D3K" secondAttribute="centerX" id="8Ys-K5-51i"/>
-                            <constraint firstAttribute="trailing" secondItem="N4V-Tz-D3K" secondAttribute="trailing" id="Bmt-o2-kAC"/>
-                            <constraint firstItem="23O-KY-WFl" firstAttribute="top" secondItem="N4V-Tz-D3K" secondAttribute="bottom" constant="46" id="OZT-qQ-Hvc"/>
-                            <constraint firstItem="N4V-Tz-D3K" firstAttribute="leading" secondItem="2dW-B3-nVK" secondAttribute="leading" id="adr-Jm-EO1"/>
-                            <constraint firstItem="23O-KY-WFl" firstAttribute="leading" secondItem="2dW-B3-nVK" secondAttribute="leadingMargin" id="r77-zb-GW3"/>
-                            <constraint firstItem="TCr-uQ-03A" firstAttribute="top" secondItem="N4V-Tz-D3K" secondAttribute="bottom" constant="46" id="spX-gW-j1R"/>
-                            <constraint firstItem="N4V-Tz-D3K" firstAttribute="top" secondItem="2dW-B3-nVK" secondAttribute="top" constant="44" id="ujv-yP-dXC"/>
-                            <constraint firstItem="TCr-uQ-03A" firstAttribute="trailing" secondItem="2dW-B3-nVK" secondAttribute="trailingMargin" id="yAX-yi-AgZ"/>
+                            <constraint firstAttribute="bottom" secondItem="0DO-sy-7ZJ" secondAttribute="bottom" id="Dwu-6P-CBf"/>
+                            <constraint firstItem="0DO-sy-7ZJ" firstAttribute="top" secondItem="2dW-B3-nVK" secondAttribute="top" id="KAV-DG-x3J"/>
+                            <constraint firstItem="0DO-sy-7ZJ" firstAttribute="leading" secondItem="2dW-B3-nVK" secondAttribute="leading" id="Zha-XB-vbw"/>
+                            <constraint firstAttribute="trailing" secondItem="0DO-sy-7ZJ" secondAttribute="trailing" id="tbl-JK-7aL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投票" id="9QS-2T-ARo"/>
                     <connections>
-                        <outlet property="againstButton" destination="TCr-uQ-03A" id="btV-vP-tqf"/>
-                        <outlet property="agreeButton" destination="23O-KY-WFl" id="efL-Hg-N3z"/>
-                        <outlet property="contentTextVIew" destination="N4V-Tz-D3K" id="O7W-pc-nwb"/>
+                        <outlet property="voteTable" destination="0DO-sy-7ZJ" id="XQR-qR-Alg"/>
                         <segue destination="l5f-co-zaB" kind="push" identifier="voteCount" id="MAO-bw-kBm"/>
                         <segue destination="5HV-OR-aJE" kind="push" identifier="callVote" id="QBD-TY-kth"/>
                     </connections>
@@ -301,7 +263,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="你好" translatesAutoresizingMaskIntoConstraints="NO" id="Lf4-zK-bkp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="即将发起的投票内容" translatesAutoresizingMaskIntoConstraints="NO" id="Lf4-zK-bkp">
                                 <rect key="frame" x="0.0" y="66" width="320" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="193" id="uNg-gN-5ah"/>
@@ -311,11 +273,12 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSL-0a-1xX">
                                 <rect key="frame" x="30" y="309" width="260" height="40"/>
-                                <color key="backgroundColor" red="0.1003104204" green="1" blue="0.96923083539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Kd9-vs-6gm"/>
                                 </constraints>
                                 <state key="normal" title="确定发起投票">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
