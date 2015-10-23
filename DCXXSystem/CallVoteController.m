@@ -10,7 +10,7 @@
 #import "RequestObject.h"
 #import "SVProgressHUD.h"
 
-@interface CallVoteController ()
+@interface CallVoteController ()<UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *voteContent;
 @property (weak, nonatomic) IBOutlet UIButton *comfirmButton;
@@ -33,6 +33,7 @@
     [self.voteContent setContentInset:UIEdgeInsetsMake(-50, 0, 0, 0)];
     self.voteContent.layer.borderWidth = 1.0f;
     self.voteContent.layer.borderColor = [UIColor blackColor].CGColor;
+    self.voteContent.delegate = self;
     
     self.view.backgroundColor = BG_COLOR;
 }
@@ -56,13 +57,13 @@
 
 - (void)callRequestAction
 {
-    [SVProgressHUD showWithStatus:@"上传中..."];
+    [SVProgressHUD showWithStatus:@"发起中..."];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if ([RequestObject fetchWithType:@"IntStartVote" withResults:self.voteContent.text]) {
             [self updateUI];
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismissWithError:@"上传失败"];
+                [SVProgressHUD dismissWithError:@"发起投票失败"];
             });
         }
     });
@@ -73,12 +74,20 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         NSArray *list = [RequestObject requestData];
         if (list.count != 0) {
-            [SVProgressHUD dismissWithSuccess:@"上传成功"];
+            [SVProgressHUD dismissWithSuccess:@"发起投票成功"];
            // [self.navigationController popViewControllerAnimated:YES];
         }else{
-            [SVProgressHUD dismissWithError:@"上传失败"];
+            [SVProgressHUD dismissWithError:@"发起投票失败"];
         }
     });
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+    }
+    return YES;
 }
 
 //取消键盘

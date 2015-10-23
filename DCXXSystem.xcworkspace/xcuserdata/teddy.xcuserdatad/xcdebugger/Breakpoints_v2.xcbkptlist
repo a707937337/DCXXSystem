@@ -58,12 +58,12 @@
                   moduleName = "DCXXSystem"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/teddy/Desktop/%E6%B5%99%E6%B1%9F%E6%B0%B4%E5%88%A9%E6%B2%B3%E5%8F%A3%E7%A0%94%E7%A9%B6%E9%99%A2/%E6%9D%AD%E5%B7%9E%E5%AE%9A%E5%B7%9D/%E9%A1%B9%E7%9B%AE/%E5%AE%9A%E5%B7%9DAPP/DCXXSystem/DCXXSystem/OrderDetailController.m"
-                  timestampString = "466584637.405958"
+                  timestampString = "467274079.019217"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "67">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "DCXXSystem"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/teddy/Desktop/%E6%B5%99%E6%B1%9F%E6%B0%B4%E5%88%A9%E6%B2%B3%E5%8F%A3%E7%A0%94%E7%A9%B6%E9%99%A2/%E6%9D%AD%E5%B7%9E%E5%AE%9A%E5%B7%9D/%E9%A1%B9%E7%9B%AE/%E5%AE%9A%E5%B7%9DAPP/DCXXSystem/DCXXSystem/OrderDetailController.m"
-                  timestampString = "466584637.406078"
+                  timestampString = "467274079.019405"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "18">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -546,31 +546,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCXXSystem/VoteViewController.m"
-            timestampString = "466581840.855877"
+            timestampString = "467272886.813802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DCXXSystem/VoteViewController.m"
-            timestampString = "466581840.855877"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -582,12 +566,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCXXSystem/VoteViewController.m"
-            timestampString = "466581840.855877"
+            timestampString = "467274386.23478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "-voteAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/VoteViewController.m"
+            timestampString = "467274386.23478"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "-alertView:clickedButtonAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/VoteViewController.m"
+            timestampString = "467274386.23478"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-getWebDataWithRequestType:results:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/VoteViewController.m"
+            timestampString = "467274386.23478"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-updateUI"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/VoteViewController.m"
+            timestampString = "467274386.23478"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-updateUI"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/CallVoteController.m"
+            timestampString = "467257192.484779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/VoteViewController.m"
+            timestampString = "467274386.23478"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DCXXSystem/VoteCountController.m"
+            timestampString = "467271129.098655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-closeAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -598,11 +694,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCXXSystem/RequestObject.m"
-            timestampString = "466569546.12402"
+            timestampString = "467273904.074751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "+fetchWithType:withResults:"
             landmarkType = "5">
          </BreakpointContent>
@@ -614,7 +710,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCXXSystem/RequestObject.m"
-            timestampString = "466569567.315913"
+            timestampString = "467274019.079387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -630,12 +726,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCXXSystem/VoteViewController.m"
-            timestampString = "466581840.855877"
+            timestampString = "467274386.23478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "-voteAction:"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "-closeVoteAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -646,12 +742,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCXXSystem/VoteViewController.m"
-            timestampString = "466581840.855877"
+            timestampString = "467274386.23478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "-alertView:clickedButtonAtIndex:"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "-closeVoteAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

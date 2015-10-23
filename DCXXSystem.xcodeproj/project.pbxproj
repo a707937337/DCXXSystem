@@ -83,7 +83,6 @@
 		9F5ED0051B6B063D0062BAAF /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5ED0041B6B063D0062BAAF /* user.png */; };
 		9FD16D011BBB74050004F7FA /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16D001BBB74050004F7FA /* VoteViewController.m */; };
 		9FD16D041BBB74F30004F7FA /* CallVoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16D031BBB74F30004F7FA /* CallVoteController.m */; };
-		9FD16D071BBB75170004F7FA /* VoteCountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16D061BBB75170004F7FA /* VoteCountController.m */; };
 		9FD16D091BBB87A80004F7FA /* vote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD16D081BBB87A80004F7FA /* vote@3x.png */; };
 		9FD16D0B1BBB87AE0004F7FA /* vote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD16D0A1BBB87AE0004F7FA /* vote@2x.png */; };
 		9FD16D0D1BBB87B20004F7FA /* vote.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FD16D0C1BBB87B20004F7FA /* vote.png */; };
@@ -218,8 +217,6 @@
 		9FD16D001BBB74050004F7FA /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
 		9FD16D021BBB74F30004F7FA /* CallVoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallVoteController.h; sourceTree = "<group>"; };
 		9FD16D031BBB74F30004F7FA /* CallVoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallVoteController.m; sourceTree = "<group>"; };
-		9FD16D051BBB75170004F7FA /* VoteCountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteCountController.h; sourceTree = "<group>"; };
-		9FD16D061BBB75170004F7FA /* VoteCountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteCountController.m; sourceTree = "<group>"; };
 		9FD16D081BBB87A80004F7FA /* vote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vote@3x.png"; sourceTree = "<group>"; };
 		9FD16D0A1BBB87AE0004F7FA /* vote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vote@2x.png"; sourceTree = "<group>"; };
 		9FD16D0C1BBB87B20004F7FA /* vote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vote.png; sourceTree = "<group>"; };
@@ -564,8 +561,6 @@
 				9FD16D001BBB74050004F7FA /* VoteViewController.m */,
 				9FD16D021BBB74F30004F7FA /* CallVoteController.h */,
 				9FD16D031BBB74F30004F7FA /* CallVoteController.m */,
-				9FD16D051BBB75170004F7FA /* VoteCountController.h */,
-				9FD16D061BBB75170004F7FA /* VoteCountController.m */,
 			);
 			name = Vote;
 			sourceTree = "<group>";
@@ -785,7 +780,6 @@
 				9F3725C41B7C9DDE000E9E13 /* HistoryCell.m in Sources */,
 				9F3227821B6A04C40008CE70 /* RestaurantViewController.m in Sources */,
 				9F3227A51B6A1FF50008CE70 /* PeopleDetailController.m in Sources */,
-				9FD16D071BBB75170004F7FA /* VoteCountController.m in Sources */,
 				9F4F243D1B79E73E00D7CBD5 /* PDFViewController.m in Sources */,
 				9F5ECFFF1B6B00820062BAAF /* ResturantCell.m in Sources */,
 				9F32EB1F1B8D91CD00D0B75E /* LIstViewController.m in Sources */,

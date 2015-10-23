@@ -206,50 +206,17 @@
                             <constraint firstAttribute="trailing" secondItem="0DO-sy-7ZJ" secondAttribute="trailing" id="tbl-JK-7aL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="投票" id="9QS-2T-ARo"/>
+                    <navigationItem key="navigationItem" title="投票" id="9QS-2T-ARo">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Uhg-wv-q4A"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="voteTable" destination="0DO-sy-7ZJ" id="XQR-qR-Alg"/>
-                        <segue destination="l5f-co-zaB" kind="push" identifier="voteCount" id="MAO-bw-kBm"/>
                         <segue destination="5HV-OR-aJE" kind="push" identifier="callVote" id="QBD-TY-kth"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8I-Nz-mfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1160" y="1286"/>
-        </scene>
-        <!--投票统计-->
-        <scene sceneID="PQb-kA-Abj">
-            <objects>
-                <viewController id="l5f-co-zaB" customClass="VoteCountController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ado-ez-Z7G"/>
-                        <viewControllerLayoutGuide type="bottom" id="WeM-cQ-CxM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tXz-pp-BZP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="yza-Ui-ucH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yza-Ui-ucH" firstAttribute="leading" secondItem="tXz-pp-BZP" secondAttribute="leading" id="HDp-2R-TFp"/>
-                            <constraint firstItem="yza-Ui-ucH" firstAttribute="top" secondItem="tXz-pp-BZP" secondAttribute="top" id="LfF-6k-Kgw"/>
-                            <constraint firstAttribute="bottom" secondItem="yza-Ui-ucH" secondAttribute="bottom" id="hNG-EC-nzG"/>
-                            <constraint firstAttribute="trailing" secondItem="yza-Ui-ucH" secondAttribute="trailing" id="sQY-FM-8Z4"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="投票统计" id="Top-Kw-een"/>
-                    <connections>
-                        <outlet property="countTableView" destination="yza-Ui-ucH" id="r2z-Qd-mK7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzd-Y1-NZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-676" y="809"/>
         </scene>
         <!--发起投票-->
         <scene sceneID="TZ1-Uz-zvK">

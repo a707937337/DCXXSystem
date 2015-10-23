@@ -20,20 +20,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUl-6b-vks">
-                        <rect key="frame" x="13" y="30" width="280" height="90"/>
+                        <rect key="frame" x="13" y="30" width="160" height="90"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2D-mI-hE1">
-                        <rect key="frame" x="33" y="128" width="40" height="30"/>
+                        <rect key="frame" x="26" y="128" width="60" height="30"/>
                         <state key="normal" title="赞成">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-aZ-oWH">
-                        <rect key="frame" x="122" y="128" width="40" height="30"/>
-                        <state key="normal" title="反对">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -43,11 +37,25 @@
                         <color key="textColor" red="0.16078431369999999" green="0.57647058819999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-cn-VvN">
+                        <rect key="frame" x="219" y="30" width="80" height="30"/>
+                        <state key="normal" title="关闭投票">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-aZ-oWH">
+                        <rect key="frame" x="122" y="126" width="60" height="30"/>
+                        <state key="normal" title="反对">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="aginstBtn" destination="exT-aZ-oWH" id="rE3-gl-phW"/>
                 <outlet property="approvalBtn" destination="c2D-mI-hE1" id="ba0-5D-3fn"/>
+                <outlet property="closeBtn" destination="dKr-cn-VvN" id="SyR-Sc-RpA"/>
                 <outlet property="contentVIew" destination="DUl-6b-vks" id="jiT-Qm-dqd"/>
                 <outlet property="dateLabel" destination="Ako-du-7BR" id="Qs2-N3-Noh"/>
                 <outlet property="stateLabel" destination="Tu4-Tn-mUC" id="UqN-XE-vEz"/>

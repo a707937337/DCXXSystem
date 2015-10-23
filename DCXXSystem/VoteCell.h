@@ -19,7 +19,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *aginstBtn;
 //状态标签
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
+//关闭按钮
+@property (weak, nonatomic) IBOutlet UIButton *closeBtn;
 
-- (void)setContentName:(NSDictionary *)dict;
+/*
+ * dict:数据源
+ *permission:是否有删除权限
+ */
+
+- (void)setContentName:(NSDictionary *)dict withPermission:(BOOL)permission;
 
 @end
